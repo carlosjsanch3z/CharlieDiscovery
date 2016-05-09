@@ -1,4 +1,4 @@
-from bottle import route, default_app
+from bottle import route, default_app, get, post, run, template, error, request, static_file, response
 
 @route('/name/<name>')
 def nameindex(name='Stranger'):
