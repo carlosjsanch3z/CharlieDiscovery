@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='Charlie Discovery',
-      version='1.1',
+      version='1.2',
       description='League of Legends App Beta',
       author='Charlie',
       author_email='example@example.com',
