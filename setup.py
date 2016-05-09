@@ -1,9 +1,9 @@
 from setuptools import setup
 
-setup(name='YourAppName',
-      version='1.0',
-      description='OpenShift App',
-      author='Your Name',
+setup(name='Charlie Discovery',
+      version='1.1',
+      description='League of Legends App Beta',
+      author='Charlie',
       author_email='example@example.com',
       url='http://www.python.org/sigs/distutils-sig/',
       install_requires=['bottle'],
