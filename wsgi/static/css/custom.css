@@ -1,0 +1,8 @@
+/* your styles go here */
+
+@font-face {
+	font-family: 'Friz Quadrata';
+	font-style: normal;
+	font-weight: 400;
+	src: url(fonts/ufonts.com_friz-quadrata_tt) format('ttf');
+}
