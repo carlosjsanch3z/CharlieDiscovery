@@ -42,8 +42,9 @@
               <div class="form-group">
                 <label class="sr-only"></label>
                 <input placeholder="Nombre de invocador" name="summoner" class="form-control transparent">
+                <input value="Enviar" type="submit" />
               </div>
-              <button class="btn btn-danger">Comprobar</button>
+              <!-- <button class="btn btn-danger">Comprobar</button> -->
             </form>
           </div>
         </div>

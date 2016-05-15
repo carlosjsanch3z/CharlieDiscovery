@@ -7,7 +7,6 @@ import requests
 #Pagina Principal
 
 @route('/')
-@route('/', method="POST")
 def index():
     return template('index2.tpl')
 
