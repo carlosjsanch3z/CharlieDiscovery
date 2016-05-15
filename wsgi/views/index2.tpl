@@ -18,13 +18,13 @@
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="static/css/custom.css">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="static/img/bolt.png">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
   <body>
-    <div style="background-image: url('static/img/video-bg.jpg')" class="main"> 
+    <div style="background-image: url('http://lkimg.zamimg.com/images/background.jpg')" class="main"> 
       <!-- video background-->
       <!-- replace URLs with your video content URL-->
       <!--<video id="video-background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
@@ -34,7 +34,9 @@
       <div class="overlay"></div>
       <div class="container">
         <p class="social"><a href="#" title="" class="facebook"><i class="fa fa-facebook"></i></a><a href="#" title="" class="twitter"><i class="fa fa-twitter"></i></a><a href="#" title="" class="gplus"><i class="fa fa-google-plus"></i></a><a href="#" title="" class="instagram"><i class="fa fa-instagram"></i></a></p>
-        <h1 class="cursive">Charlie Discovery</h1>
+        <h1 class="cursive">Charlie Discovery
+          <img src="static/img/logotext.png">
+        </h1>
         <div class="mailing-list">
           <h3 class="mailing-list-heading">¡ Echale un vistazo a la información referente a un invocador de la grieta !</h3>
           <div class="row">
