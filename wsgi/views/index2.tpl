@@ -38,7 +38,7 @@
         <div class="mailing-list">
           <h3 class="mailing-list-heading">¡ Echale un vistazo a la información referente a un invocador de la grieta !</h3>
           <div class="row">
-            <form action"/summoner" class="form-inline" method="post">
+            <form action"/summoner/" class="form-inline" method="post">
               <div class="form-group">
                 <label class="sr-only"></label>
                 <input placeholder="Nombre de invocador" name="summoner" class="form-control transparent">
