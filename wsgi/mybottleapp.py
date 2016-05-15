@@ -8,7 +8,13 @@ import requests
 
 @route('/')
 def index():
-    return template('index2.tpl')
+       return '''
+       <form action="/summoner" method="post">
+       Url: <input name="summoner" type="text"/>
+       <input value="comprobar" type="submit" />
+       </form>
+       '''
+    #return template('index2.tpl')
 
 #Pagina donde devuelve la información del jugador
 
