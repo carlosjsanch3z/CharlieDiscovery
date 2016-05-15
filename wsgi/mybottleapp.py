@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 from bottle import route, default_app, get, post, run, template, error, request, static_file, response
 
 @route('/name/<name>')
@@ -17,9 +20,9 @@ def get_info():
 	summonerName = request.forms.get('summoner')
 	URL = "https://" + region + ".api.pvp.net/api/lol/" + region + "/v1.4/summoner/by-name/" + summonerName + "?api_key=" + APIKey
 
-	if r.status_code == 200:
+	if r.status_code == 404:
 		return template('summoner.tpl')
-	elif r.status_code == 404:
+	elif r.status_code == 200:
 		ID = responseJSON[summonerName]['id']
 		return template('summoner.tpl', ide = ID)
 
