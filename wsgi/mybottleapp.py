@@ -8,14 +8,7 @@ import requests
 
 @route('/')
 def index():
-	'''return 
-	    <form action="/summoner" method="post">
-	        Invocador: <input name="summoner" type="text" />
-	        <br/>
-	        <input value="comprobar" type="submit" />
-	    </form> '''
     return template('index2.tpl')
-
 
 #Pagina donde devuelve la información del jugador
 
@@ -37,7 +30,7 @@ def infosummoner():
 		responseJSON = response.json()
 		ID = responseJSON[summonerName]['id']
 		ID = str(ID)
-		return return template('index.tpl', identificador=ID, invocador=summonerName)
+		return template('index.tpl', identificador=ID, invocador=summonerName)
 	else:
 		notfound = "El nombre de invocador introducido no se encuentra en la region EUW."
 		return template('index2', notfound=notfound)
