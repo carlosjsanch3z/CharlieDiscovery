@@ -36,6 +36,7 @@
         <p class="social"><a href="#" title="" class="facebook"><i class="fa fa-facebook"></i></a><a href="#" title="" class="twitter"><i class="fa fa-twitter"></i></a><a href="#" title="" class="gplus"><i class="fa fa-google-plus"></i></a><a href="#" title="" class="instagram"><i class="fa fa-instagram"></i></a></p>
         <h1 class="cursive">Charlie Discovery</h1>
         <div class="mailing-list">
+          <h2 class="mailing-list-heading" style="color:red">{{notfound}}</h2>
           <h3 class="mailing-list-heading">¡ Echale un vistazo a la información referente a un invocador de la grieta !</h3>
           <div class="row">
             <form action"/summoner" class="form-inline" method="post">
