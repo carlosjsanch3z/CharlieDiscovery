@@ -41,10 +41,9 @@
             <form action"/summoner" class="form-inline" method="post">
               <div class="form-group">
                 <label class="sr-only"></label>
-                <input placeholder="Nombre de invocador" name="summoner" type="text" class="form-control transparent">
-                <input value="Enviar" type="submit" />
+                <input placeholder="Nombre de invocador" name="summoner" type="text" class="form-control transparent"
               </div>
-              <!-- <button class="btn btn-danger">Comprobar</button> -->
+              <button class="btn btn-danger">Comprobar</button>
             </form>
           </div>
         </div>
