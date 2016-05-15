@@ -37,7 +37,7 @@ def infosummoner():
 
 	#return template('index.tpl', identificador=ID, invocador=summonerName)
 
-@route('/summoner', method="POST")
+@route('/summoner')
 def infosummoner():
 	return "No esta accediendo mediante el metodo POST"
 
