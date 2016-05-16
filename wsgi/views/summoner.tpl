@@ -51,7 +51,14 @@
 
       <div class="container">
         <div class="col-md-7"></div>
-        <div class="col-md-5"></div>
+        <div class="col-md-5">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              Panel content
+            </div>
+          <div class="panel-footer">Panel footer</div>
+          </div>
+        </div>
       </div>
       <div class="footer">
         <div class="container">
