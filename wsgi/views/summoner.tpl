@@ -65,7 +65,7 @@
             <div class="panel-body">
               % for k in free:
               <a href="#">
-                <img src="{{iconos[k]}}" alt="...">
+                <img class="col-md-3" src="{{iconos[k]}}" alt="...">
               </a>
               % end
             </div>
