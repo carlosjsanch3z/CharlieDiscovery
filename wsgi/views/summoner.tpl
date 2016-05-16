@@ -50,13 +50,28 @@
 
 
       <div class="container">
-        <div class="col-md-7"></div>
+        <!-- Panel principal -->
+        <div class="col-md-7">
+
+          <p>{{stats}}</p>
+
+
+
+
+        </div>
+        <!-- Panel lateral -->
         <div class="col-md-5">
-          <div class="panel panel-default">
+          <div class="panel panel-primary">
             <div class="panel-body">
-              Panel content
+              <div class="row">
+              % for k in free:
+              <a href="#" class="thumbnail">
+                <img src="{{iconos[k]}}" alt="...">
+              </a>
+              % end
+              </div>
             </div>
-          <div class="panel-footer">Panel footer</div>
+          <div class="panel-footer">Campeones Free To Play Version: {{version}}</div>
           </div>
         </div>
       </div>

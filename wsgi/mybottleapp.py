@@ -36,15 +36,63 @@ def infosummoner():
 	profileiconID = str(profileiconID)
 	urlimageicon = "http://lkimg.zamimg.com/images/v2/summoner/icons/size64x64/"+ profileiconID + ".png"
 
+	#Conseguir la última versión del juego de una lista
+
+	URL3 = "https://global.api.pvp.net/api/lol/static-data/euw/v1.2/versions?api_key=" + APIKey
+
+	response3 = requests.get(URL3)
+	response3JSON = response3.json()
+	lastversion = response3JSON[0]
+	lastversion = str(lastversion)
+
+	#Sacar los IDS de los campeones que estan gratuitos para jugar esta semana
+
+	URL4 = "https://euw.api.pvp.net/api/lol/euw/v1.2/champion?freeToPlay=true&api_key=" + APIKey
+
+	response4 = requests.get(URL4)
+	response4JSON = response4.json()
+	freetoplays = []
+		
+	for ch in response4JSON['champions']:
+		if ch['freeToPlay'] == True:
+			ide = ch['id']
+			ide = str(ide)
+			freetoplays.append(ide)
+
+	#Conseguir los nombres de las imagenes de cada campeon para construir la URL de la imagen
+
+	iconos = {}
+
+	for k in freetoplays:
+		idechamp = k
+		URL5 = "https://global.api.pvp.net/api/lol/static-data/euw/v1.2/champion/" + idechamp + "?champData=image&api_key=" + APIKey
+		response5 = requests.get(URL5)
+		response5JSON = response5.json()
+		imagen = response5JSON['image']['full']
+		rutaimagen = "http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/" + imagen
+		iconos[idechamp] = rutaimagen
+
+
+	# Estadisticas de las partidas en la season actual
+	URL6 = "https://euw.api.pvp.net/api/lol/euw/v1.3/stats/by-summoner/" + ID + "/summary?season=SEASON2016&api_key=" + APIKey
+
+	response6 = requests.get(URL6)
+	response6JSON = response6.json()
+
+	stats = response6JSON['playerStatSummaries']
+
+
+
 	if response.status_code == 200 and response2.status_code == 200:
-		return template('summoner.tpl', identificador=ID, invocador=summonerName, nivel=level, icono=urlimageicon )
+		return template('summoner.tpl', identificador=ID, invocador=summonerName, nivel=level, 
+			icono=urlimageicon, version=lastversion, free=freetoplays, iconos=iconos, stats=stats)
 	elif response.status_code == 404:
 		notfound = "El nombre de invocador introducido no se encuentra en la region EUW."
 		return template('index2', notfound=notfound)
 	else:
 		return template('index2', notfound=notfound)
 
-	#return template('index.tpl', identificador=ID, invocador=summonerName)
+	
 
 
 
