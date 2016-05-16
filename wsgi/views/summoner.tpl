@@ -9,7 +9,7 @@
     <meta name="robots" content="all,follow">
     <!-- Bootstrap and Font Awesome css-->
     <link rel="stylesheet" href="static/css/font-awesome.css">
-    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/bootstrap.css">
     <!-- Google fonts-->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Pacifico">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
@@ -32,6 +32,7 @@
       <!-- <source src="https://drive.google.com/file/d/0B8ExsDXbWBt8X194WV9wcm95RWs" type="video/mp4"> 
       </video> -->
       <div class="overlay"></div>
+      <!-- Principal -->
       <div class="container">
         <p class="social"><a href="#" title="" class="facebook"><i class="fa fa-facebook"></i></a><a href="#" title="" class="twitter"><i class="fa fa-twitter"></i></a><a href="#" title="" class="gplus"><i class="fa fa-google-plus"></i></a><a href="#" title="" class="instagram"><i class="fa fa-instagram"></i></a></p>
         <h1 class="cursive">
@@ -45,6 +46,12 @@
             <h1>Nivel: {{nivel}}</h1>
           </div>
         </div>
+      </div>
+
+
+      <div class="container">
+        <div class="col-md-7"></div>
+        <div class="col-md-5"></div>
       </div>
       <div class="footer">
         <div class="container">
