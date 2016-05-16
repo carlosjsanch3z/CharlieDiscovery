@@ -8,7 +8,7 @@ import requests
 
 @route('/')
 def index():
-	return ''' <form action="/resultado" method="post">
+	return ''' <form action="/summoner" method="post">
             Nombre <input name="summoner" type="text" />
             <input value="Enviar" type="submit" />
         </form> '''
