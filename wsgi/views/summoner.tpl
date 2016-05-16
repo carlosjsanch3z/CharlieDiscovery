@@ -64,7 +64,7 @@
           <div class="panel panel-primary">
             <div class="panel-body">
               % for k in free:
-              <a href="#" class="thumbnail">
+              <a href="#">
                 <img src="{{iconos[k]}}" alt="...">
               </a>
               % end
