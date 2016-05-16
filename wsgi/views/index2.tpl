@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="static/css/font-awesome.css">
     <link rel="stylesheet" href="static/css/bootstrap.min.css">
     <!-- Google fonts-->
-    <link rel="stylesheet" href="static/http://fonts.googleapis.com/css?family=Pacifico">
-    <link rel="stylesheet" href="static/http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Pacifico">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
     <!-- Theme stylesheet-->
     <link rel="stylesheet" href="static/css/style.default.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
