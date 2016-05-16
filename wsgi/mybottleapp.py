@@ -29,15 +29,19 @@ def infosummoner():
 	# Conseguir el nivel del jugador y el ID del icono de perfil
 	URL2 = "https://" + region + ".api.pvp.net/api/lol/" + region + "/v1.4/summoner/" + ID + "?api_key=" + APIKey
 	response2 = requests.get(URL2)
-	level = response2[ID]['summonerLevel']
+	response2JSON = response2.json()
+	level = response2JSON[ID]['summonerLevel']
 	level = str(level)
-	profileiconID = response2['profileIconId']
+	profileiconID = response2JSON[ID]['profileIconId']
 	profileiconID = str(profileiconID)
+	urlimageicon = "http://lkimg.zamimg.com/images/v2/summoner/icons/size64x64/"+ profileiconID + ".png"
 
-	if response.status_code == 200:
-		return template('summoner.tpl', identificador=ID, invocador=summonerName, nivel=level, icono=profileiconID)
-	else:
+	if response.status_code == 200 and response2.status_code == 200:
+		return template('summoner.tpl', identificador=ID, invocador=summonerName, nivel=level, icono=urlimageicon )
+	elif response.status_code == 404:
 		notfound = "El nombre de invocador introducido no se encuentra en la region EUW."
+		return template('index2', notfound=notfound)
+	else:
 		return template('index2', notfound=notfound)
 
 	#return template('index.tpl', identificador=ID, invocador=summonerName)

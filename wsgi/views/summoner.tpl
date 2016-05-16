@@ -38,9 +38,11 @@
           <img src="static/img/logotext.png">
         </h1>
         <div class="mailing-list">
-          <h3 class="mailing-list-heading">{{invocador}} su ID es: {{identificador}}</h3>
+          <h3 class="mailing-list-heading">
+            <img src={{icono}}>
+            {{invocador}} su ID es: {{identificador}}</h3>
           <div class="row">
-            <h1>Nivel: {{level}} y codigo del icono: {{icono}}</h1>
+            <h1>Nivel: {{nivel}}</h1>
           </div>
         </div>
       </div>
