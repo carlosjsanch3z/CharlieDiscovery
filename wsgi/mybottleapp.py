@@ -34,7 +34,7 @@ def infosummoner():
 		responseJSON = response.json()
 		ID = responseJSON[summonerName]['id']
 		ID = str(ID)
-		return template('index.tpl', identificador=ID, invocador=summonerName)
+		return template('summoner.tpl', identificador=ID, invocador=summonerName)
 	else:
 		notfound = "El nombre de invocador introducido no se encuentra en la region EUW."
 		return template('index2', notfound=notfound)
