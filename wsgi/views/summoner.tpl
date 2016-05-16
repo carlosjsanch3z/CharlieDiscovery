@@ -63,13 +63,11 @@
         <div class="col-md-5">
           <div class="panel panel-primary">
             <div class="panel-body">
-              <div class="row">
               % for k in free:
               <a href="#" class="thumbnail">
                 <img src="{{iconos[k]}}" alt="...">
               </a>
               % end
-              </div>
             </div>
           <div class="panel-footer">Campeones Free To Play Version: {{version}}</div>
           </div>
