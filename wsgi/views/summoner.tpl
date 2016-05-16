@@ -38,7 +38,7 @@
           <img src="static/img/logotext.png">
         </h1>
         <div class="mailing-list">
-          <h3 class="mailing-list-heading">{{invocador}} su ID es: {identificador}</h3>
+          <h3 class="mailing-list-heading">{{invocador}} su ID es: {{identificador}}</h3>
           <div class="row">
             <form action"/summoner" class="form-inline" method="post">
               <div class="form-group">
