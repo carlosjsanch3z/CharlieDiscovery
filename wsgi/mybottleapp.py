@@ -2,15 +2,50 @@
 # -*- coding: utf-8 -*-
 
 from bottle import route, default_app, get, post, run, template, error, request, static_file, response
+import json
 import requests
 
-#Pagina Principal
+#Pagina Principal - Donde se muestra el estado del servidor, la version del juego y los campeones gratuitos de la semana
 
 @route('/')
 def index():
-    return template('index.tpl')
 
-#Pagina donde devuelve la información del jugador
+	#Sacar los IDS de los campeones que estan gratuitos para jugar esta semana
+	payload = {"freeToPlay":"true","api_key":"30ed66a9-fe04-4b57-ad61-871f1995cfb2"}
+	freechamps = requests.get('https://euw.api.pvp.net/api/lol/euw/v1.2/champion',params=payload)
+	freetoplays = []
+	if freechamps.status_code == 200:
+		gratuitos = json.loads(freechamps.text)
+
+		for ch in gratuitos['champions']:
+			if ch['freeToPlay'] == True:
+				ide = ch['id']
+				freetoplays.append(ide)
+
+	#Conseguir los nombres de las imagenes de cada campeon para construir la URL de la imagen
+
+	payload1 = {"champData":"image","api_key":"30ed66a9-fe04-4b57-ad61-871f1995cfb2"}
+	url = requests.get('https://global.api.pvp.net/api/lol/static-data/euw/v1.2/champion',params=payload1)
+	iconos = []
+	if url.status_code == 200:
+		imagenes = json.loads(url.text)
+	
+		for i in imagenes['data']:
+
+			if imagenes['data'][i]['id'] in freetoplays:
+				imagefull = imagenes['data'][i]['image']['full']
+				rutaimagen = "http://ddragon.leagueoflegends.com/cdn/6.10.1/img/champion/" + imagefull
+				iconos.append(rutaimagen)
+
+	return template('index.tpl', free=freetoplays, iconos=iconos)
+
+
+
+
+
+
+
+
 
 @route('/summoner', method="POST")
 def infosummoner():
@@ -45,33 +80,8 @@ def infosummoner():
 	lastversion = response3JSON[0]
 	lastversion = str(lastversion)
 
-	#Sacar los IDS de los campeones que estan gratuitos para jugar esta semana
+	
 
-	URL4 = "https://euw.api.pvp.net/api/lol/euw/v1.2/champion?freeToPlay=true&api_key=" + APIKey
-
-	response4 = requests.get(URL4)
-	response4JSON = response4.json()
-	freetoplays = []
-		
-	for ch in response4JSON['champions']:
-		if ch['freeToPlay'] == True:
-			ide = ch['id']
-			freetoplays.append(ide)
-
-	#Conseguir los nombres de las imagenes de cada campeon para construir la URL de la imagen
-
-	iconos = {}
-	URL5 = "https://global.api.pvp.net/api/lol/static-data/euw/v1.2/champion?champData=image&api_key=" + APIKey
-	iconos = []
-	response5 = requests.get(URL5)
-	response5JSON = response5.json()
-
-	for i in response5JSON['data']:
-
-		if response5JSON['data'][i]['id'] in freetoplays:
-			imagefull = response5JSON['data'][i]['image']['full']
-			rutaimagen = "http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/" + imagefull
-			iconos.append(rutaimagen)
 
 	# Estadisticas de las partidas en la season actual
 	URL6 = "https://euw.api.pvp.net/api/lol/euw/v1.3/stats/by-summoner/" + ID + "/summary?season=SEASON2016&api_key=" + APIKey
