@@ -56,22 +56,22 @@ def infosummoner():
 	for ch in response4JSON['champions']:
 		if ch['freeToPlay'] == True:
 			ide = ch['id']
-			ide = str(ide)
 			freetoplays.append(ide)
 
 	#Conseguir los nombres de las imagenes de cada campeon para construir la URL de la imagen
 
 	iconos = {}
+	URL5 = "https://global.api.pvp.net/api/lol/static-data/euw/v1.2/champion?champData=image&api_key=" + APIKey
+	iconos = []
+	response5 = requests.get(URL5)
+	response5JSON = response5.json()
 
-	for k in freetoplays:
-		idechamp = k
-		URL5 = "https://global.api.pvp.net/api/lol/static-data/euw/v1.2/champion/" + idechamp + "?champData=image&api_key=" + APIKey
-		response5 = requests.get(URL5)
-		response5JSON = response5.json()
-		imagen = response5JSON['image']['full']
-		rutaimagen = "http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/" + imagen
-		iconos[idechamp] = rutaimagen
+	for i in response5JSON['data']:
 
+		if response5JSON['data'][i]['id'] in freetoplays:
+			imagefull = response5JSON['data'][i]['image']['full']
+			rutaimagen = "http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/" + imagefull
+			iconos.append(rutaimagen)
 
 	# Estadisticas de las partidas en la season actual
 	URL6 = "https://euw.api.pvp.net/api/lol/euw/v1.3/stats/by-summoner/" + ID + "/summary?season=SEASON2016&api_key=" + APIKey
@@ -79,13 +79,15 @@ def infosummoner():
 	response6 = requests.get(URL6)
 	response6JSON = response6.json()
 
-	stats = response6JSON['playerStatSummaries']
+	#stats = response6JSON['playerStatSummaries']
 
 
 
 	if response.status_code == 200 and response2.status_code == 200:
-		return template('summoner.tpl', identificador=ID, invocador=summonerName, nivel=level, 
-			icono=urlimageicon, version=lastversion, free=freetoplays, iconos=iconos, stats=stats)
+		#return template('summoner.tpl', identificador=ID, invocador=summonerName, nivel=level, 
+		#	icono=urlimageicon, version=lastversion, free=freetoplays, iconos=iconos)
+		for i in iconos:
+			return i
 	elif response.status_code == 404:
 		notfound = "El nombre de invocador introducido no se encuentra en la region EUW."
 		return template('index2', notfound=notfound)

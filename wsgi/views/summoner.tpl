@@ -53,7 +53,7 @@
         <!-- Panel principal -->
         <div class="col-md-7">
 
-          <p>{{stats}}</p>
+          <p></p>
 
 
 
@@ -63,9 +63,9 @@
         <div class="col-md-5">
           <div class="panel panel-primary">
             <div class="panel-body">
-              % for k in free:
+              % for i in iconos:
               <a href="#">
-                <img class="col-md-3" src="{{iconos[k]}}" alt="...">
+                <img class="col-md-3" src="{{i}}" alt="...">
               </a>
               % end
             </div>
