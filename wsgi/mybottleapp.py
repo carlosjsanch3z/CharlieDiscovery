@@ -8,7 +8,7 @@ import requests
 
 @route('/')
 def index():
-    return template('index2.tpl')
+    return template('index.tpl')
 
 #Pagina donde devuelve la información del jugador
 

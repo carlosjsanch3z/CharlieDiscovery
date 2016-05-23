@@ -6,10 +6,10 @@
 <title>Discovery</title>
 <link href="http://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css" />
 <!-- Included CSS Files -->
-<link rel="stylesheet" href="stylesheets/main.css" />
-<link rel="stylesheet" href="stylesheets/devices.css" />
-<link rel="stylesheet" href="stylesheets/paralax_slider.css" />
-<link rel="stylesheet" href="stylesheets/jquery.fancybox.css?v=2.1.2" type="text/css"  media="screen" />
+<link rel="stylesheet" href="static/stylesheets/main.css" />
+<link rel="stylesheet" href="static/stylesheets/devices.css" />
+<link rel="stylesheet" href="static/stylesheets/paralax_slider.css" />
+<link rel="stylesheet" href="sstatic/tylesheets/jquery.fancybox.css?v=2.1.2" type="text/css"  media="screen" />
 <!--[if IE]>
 <link rel="stylesheet" href="stylesheets/ie.css"> 
 <![endif]-->
@@ -24,7 +24,7 @@
   <div id="main_wrapper"> 
     
     <!--********************************************* Logo Start *********************************************-->
-    <div id="logo"> <a href="#"><img alt="alt_example" src="./images/logotext.png"  /></a>
+    <div id="logo"> <a href="#"><img alt="alt_example" src="static//images/logotext.png"  /></a>
 
       <div id="menu_wrapper">
       <div id="row">
@@ -82,7 +82,7 @@
       <div class="footer_widget">
         <div class="header"><a href="#">Estado del servidor</a></div>
         <div class="body">
-          <p><img alt="alt_example" class="statuserver" src="./images/serverstatus.png" align="left"/>
+          <p><img alt="alt_example" class="statuserver" src="static//images/serverstatus.png" align="left"/>
             Estado del servidor: on/off
             Version actual del juego
           </p>
@@ -93,8 +93,8 @@
         <div class="header"><a href="#">Campeones gratuitos de la semana</a></div>
         <div class="body">
           <ul id="l_media_list">
-            <li><a class="shadowbox" href="./images/media/full/1.jpg" rel="gallery" ><img alt="alt_example" src="./images/media/thumb/1.jpg" /></a></li>
-            <li><a class="shadowbox" href="./images/media/full/1.jpg" rel="gallery" ><img alt="alt_example" src="./images/media/thumb/1.jpg" /></a></li>
+            <li><a class="shadowbox" href="static//images/media/full/1.jpg" rel="gallery" ><img alt="alt_example" src="./images/media/thumb/1.jpg" /></a></li>
+            <li><a class="shadowbox" href="static//images/media/full/1.jpg" rel="gallery" ><img alt="alt_example" src="./images/media/thumb/1.jpg" /></a></li>
             <li><a class="shadowbox" href="./images/media/full/1.jpg" rel="gallery" ><img alt="alt_example" src="./images/media/thumb/1.jpg" /></a></li>
             <li><a class="shadowbox" href="./images/media/full/1.jpg" rel="gallery" ><img alt="alt_example" src="./images/media/thumb/1.jpg" /></a></li>
             <li><a class="shadowbox" href="./images/media/full/1.jpg" rel="gallery" ><img alt="alt_example" src="./images/media/thumb/1.jpg" /></a></li>
@@ -121,11 +121,11 @@
 <!--********************************************* Main wrapper end *********************************************--> 
 
 <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script> 
-<script src="./javascript/jquery.carouFredSel-6.1.0.js" type="text/javascript"></script> 
-<script src="./javascript/jquery.cslider.js" type="text/javascript" ></script> 
-<script src="./javascript/modernizr.custom.28468.js" type="text/javascript"></script> 
-<script src="./javascript/getTweet.js" type="text/javascript" ></script> 
-<script src="./javascript/jquery.fancybox.js?v=2.1.3" type="text/javascript" ></script> 
+<script src="static/javascript/jquery.carouFredSel-6.1.0.js" type="text/javascript"></script> 
+<script src="static/javascript/jquery.cslider.js" type="text/javascript" ></script> 
+<script src="static/javascript/modernizr.custom.28468.js" type="text/javascript"></script> 
+<script src="static/javascript/getTweet.js" type="text/javascript" ></script> 
+<script src="static/javascript/jquery.fancybox.js?v=2.1.3" type="text/javascript" ></script> 
 
 <!--******* Javascript Code for the Hot news carousel *******--> 
 <script type="text/javascript">
