@@ -84,7 +84,8 @@
         <div class="body">
           <p><img alt="alt_example" class="statuserver" src="static//images/serverstatus.png" align="left"/>
             Estado del servidor: on/off
-            Version actual del juego
+            <br>
+            Version actual del juego: {{version}}
           </p>
         </div>
       </div>

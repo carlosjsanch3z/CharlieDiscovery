@@ -10,6 +10,7 @@ import requests
 @route('/')
 def index():
 
+	APIKey = {"api_key":"30ed66a9-fe04-4b57-ad61-871f1995cfb2"}
 	#Sacar los IDS de los campeones que estan gratuitos para jugar esta semana
 	payload = {"freeToPlay":"true","api_key":"30ed66a9-fe04-4b57-ad61-871f1995cfb2"}
 	freechamps = requests.get('https://euw.api.pvp.net/api/lol/euw/v1.2/champion',params=payload)
@@ -37,7 +38,15 @@ def index():
 				rutaimagen = "http://ddragon.leagueoflegends.com/cdn/6.10.1/img/champion/" + imagefull
 				iconos.append(rutaimagen)
 
-	return template('index.tpl', free=freetoplays, iconos=iconos)
+	#Conseguir la última versión del juego de una lista
+
+	requestversion = requests.get('https://global.api.pvp.net/api/lol/static-data/euw/v1.2/versions',params=APIKey)
+	getversion = json.loads(requestversion.text)
+	lastversion = str(getversion[0])
+
+
+
+	return template('index.tpl', free=freetoplays, iconos=iconos, version=lastversion)
 
 
 
@@ -71,14 +80,7 @@ def infosummoner():
 	profileiconID = str(profileiconID)
 	urlimageicon = "http://lkimg.zamimg.com/images/v2/summoner/icons/size64x64/"+ profileiconID + ".png"
 
-	#Conseguir la última versión del juego de una lista
 
-	URL3 = "https://global.api.pvp.net/api/lol/static-data/euw/v1.2/versions?api_key=" + APIKey
-
-	response3 = requests.get(URL3)
-	response3JSON = response3.json()
-	lastversion = response3JSON[0]
-	lastversion = str(lastversion)
 
 	
 
