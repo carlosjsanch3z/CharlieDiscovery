@@ -84,9 +84,9 @@ def infosummoner():
 		ID = identificadorJSON[summonerName]['id']
 		ID = str(ID)
 		name = identificadorJSON[summonerName]['name']
-		icon = identificadorJSON[summonerName]['profileIconId']
+		#icon = identificadorJSON[summonerName]['profileIconId']
 		nivel = identificadorJSON[summonerName]['summonerLevel']
-		urlimageicon = "http://lkimg.zamimg.com/images/v2/summoner/icons/size64x64/"+ str(icon) + ".png"
+		urlimageicon = "http://avatar.leagueoflegends.com/summonerId/euw/"+ ID + ".png"
 
 
 	# Consultar si el jugador esta jugando una partida o no, tipo de partida y con que campeon
