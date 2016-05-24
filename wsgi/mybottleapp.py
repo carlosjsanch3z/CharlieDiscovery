@@ -119,10 +119,21 @@ def infosummoner():
 		isplaying = "No esta jugando ninguna partida en este momento"
 		color = "rojo"
 
+	# Sacar liga y division del jugador RANKED SOLO 5X5
+	URL1 = "https://euw.api.pvp.net/api/lol/euw/v2.5/league/by-summoner/"+str(ID)+"/entry"
+	getleague = requests.get(URL1,params=APIKey)
+	leagueofpoints5x5 = "No rating"
+	tier = "unknown"
+	if getleague.status_code == 200:
+		getleagueJSON = json.loads(getleague.text)
+		tier = getleagueJSON[ID][0]['tier']+"_1"
+		tier = tier.lower()
+		leagueofpoints5x5 = getleagueJSON[ID][0]['entries'][0]['leaguePoints']
+		leagueofpoints5x5 = leagueofpoints5x5 + " LP"
 
 
 
-	return template('summoner.tpl', name=name, nivel=nivel, urlimageicon=urlimageicon, isplaying=isplaying, color=color)
+	return template('summoner.tpl', name=name, nivel=nivel, urlimageicon=urlimageicon, isplaying=isplaying, color=color, leagueofpoints=leagueofpoints5x5, tier=tier)
 	# queue -> RANKED_SOLO_5x5
 	# nombre de la liga 
 	# entries -> leaguePoints , division , losses , playerOrTeamName, wins
