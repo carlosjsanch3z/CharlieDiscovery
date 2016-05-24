@@ -53,8 +53,8 @@
           <div class="content" style="width: 125px;height: 100px;">
             <p>{{division5x5}}</p>
             <br>
-            <p>{{leagueofpoints}} LP</p>
-            <div class="info"> <a href="./post.html" class="comments verde"><span>{{wins5x5}}</span> W</a> <a href="./post.html" class="comments rojo"><span>{{losses5x5}}</span> L</a> </div>
+            <p>{{leagueofpoints}}</p>
+            <div class="info"> <a href="#" class="comments verde"><span>{{wins5x5}}</span> W</a> <a href="#" class="comments rojo"><span>{{losses5x5}}</span> L</a> </div>
           </div>
         </li>
         <li>

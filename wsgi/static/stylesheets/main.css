@@ -595,7 +595,9 @@ ul#hot_news_box li a.read_more{
 	width:78px;
 }
 
-
+#hot_news a:link {
+	text-decoration: none;
+}
 
 /* -----------------------------------------
   Main news wrapper
