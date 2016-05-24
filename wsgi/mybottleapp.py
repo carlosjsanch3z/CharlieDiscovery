@@ -73,9 +73,10 @@ def infosummoner():
 	APIKey = {"api_key":"30ed66a9-fe04-4b57-ad61-871f1995cfb2"}
 	#Consigue el ID del invocador
 	summonerName = request.forms.get('summoner')
-	summonerName = str(summonerName.lower())
+	summonerName = str(summonerName)
+	summonerName = summonerName.lower()
 	urlmasname = "https://euw.api.pvp.net/api/lol/euw/v1.4/summoner/by-name/"+summonerName
-	getid = requests.get('urlmasname',params=APIKey)
+	getid = requests.get(urlmasname,params=APIKey)
 
 	if getid.status_code == 200:
 		identificadorJSON = json.loads(getid.text)
