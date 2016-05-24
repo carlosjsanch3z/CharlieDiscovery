@@ -14,18 +14,7 @@
 <link rel="stylesheet" href="stylesheets/ie.css"> 
 <![endif]-->
 
-<style type="text/css">
 
-.verde {
-  color: #20C715;
-}
-
-.rojo {
-  color: #E00404;
-}
-
-
-</style>
 
 </head>
 
