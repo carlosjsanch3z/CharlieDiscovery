@@ -567,7 +567,7 @@ ul#hot_news_box li a.comments{
 	display:block;
 	font-size:10px;
 	padding:8px 5px 0px 0px;
-	color:#2ac0ff;
+	/*color:#2ac0ff;*/
 	text-decoration:underline;
 	transition:color 0.35s ease-in-out;
 	/* Firefox 4 */

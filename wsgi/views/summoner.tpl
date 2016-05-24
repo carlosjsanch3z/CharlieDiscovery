@@ -48,10 +48,10 @@
       <a id="prev" class="prev" href="#"><img alt="alt_example" src="static/images/blank.gif" width="21" height="33" border="0" /></a> <a id="next" class="next" href="#"><img alt="alt_example" src="static/images/blank.gif" width="21" height="33" border="0" /></a>
       <ul id="hot_news_box">
         <li>
-          <h2><a href="./post.html">RANKED_SOLO_5x5</a></h2>
+          <h2><a href="./post.html">RANKED SOLO 5 VS 5</a></h2>
           <div class="image" style="width: 100px;height: 100px;"><a href="./post.html"><img alt="alt_example" src="http://lkimg.zamimg.com/images/medals/{{tier5x5}}.png"/></a></div>
           <div class="content" style="width: 125px;height: 100px;">
-            <p>tier</p>
+            <p>{{division5x5}}</p>
             <p>{{leagueofpoints}} LP</p>
             <div class="info"> <a href="./post.html" class="comments verde"><span>{{wins5x5}}</span> wins</a> <a href="./post.html" class="comments rojo"><span>{{losses5x5}}</span> losses</a> </div>
           </div>

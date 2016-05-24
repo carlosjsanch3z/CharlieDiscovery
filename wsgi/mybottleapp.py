@@ -129,11 +129,14 @@ def infosummoner():
 	tier5x5 = "unknown"
 	losses5x5 = 0
 	wins5x5 = 0
+	division5x5 = "unknown"
 
 	if getleague.status_code == 200:
 		getleagueJSON = json.loads(getleague.text)
-		tier5x5 = getleagueJSON[ID][0]['tier']+"_1"
-		tier5x5 = tier5x5.lower()
+		tier5x5 = getleagueJSON[ID][0]['tier']
+		division5x5 = getleagueJSON[ID][0]['entries'][0]['division']
+		division5x5 = str(tier5x5) + str(division5x5)
+		tier5x5 = tier5x5.lower()+"_1"
 		leagueofpoints5x5 = getleagueJSON[ID][0]['entries'][0]['leaguePoints']
 		leagueofpoints5x5 = str(leagueofpoints5x5) + " LP"
 		losses5x5 = getleagueJSON[ID][0]['entries'][0]['losses']
@@ -141,7 +144,7 @@ def infosummoner():
 
 
 
-	return template('summoner.tpl', name=name, nivel=nivel, urlimageicon=urlimageicon, isplaying=isplaying, color=color, leagueofpoints=leagueofpoints5x5, tier5x5=tier5x5, losses5x5=losses5x5, wins5x5=wins5x5)
+	return template('summoner.tpl', name=name, nivel=nivel, urlimageicon=urlimageicon, isplaying=isplaying, color=color, leagueofpoints=leagueofpoints5x5, tier5x5=tier5x5, losses5x5=losses5x5, wins5x5=wins5x5, division5x5=division5x5)
 	# queue -> RANKED_SOLO_5x5
 	# nombre de la liga 
 	# entries -> leaguePoints , division , losses , playerOrTeamName, wins
