@@ -14,8 +14,6 @@
 <link rel="stylesheet" href="stylesheets/ie.css"> 
 <![endif]-->
 
-
-
 </head>
 
 <body>

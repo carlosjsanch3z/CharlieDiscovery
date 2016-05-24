@@ -55,8 +55,8 @@ def index():
 		for elemento in xrange(4):
 			key = estados['services'][elemento]['name']
 			value = estados['services'][elemento]['status']
-			# CUIDAOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO con el moreno
-			if key == 'Game':
+			# 
+			if key == 'Client':
 				value = 'offline'
 			game[key] = value
 
@@ -72,27 +72,40 @@ def index():
 
 @route('/summoner', method="POST")
 def infosummoner():
-	APIKey = "30ed66a9-fe04-4b57-ad61-871f1995cfb2"
-	region = "euw"
-	summonerName = request.forms.get('summoner')
-	summonerName = str(summonerName)
-	summonerName = summonerName.lower()
+	return template('summoner.tpl')
+
+	# queue -> RANKED_SOLO_5x5
+	# nombre de la liga 
+	# entries -> leaguePoints , division , losses , playerOrTeamName, wins
+
+	# tier
+
+
+
+
+
+
+	#APIKey = "30ed66a9-fe04-4b57-ad61-871f1995cfb2"
+	#region = "euw"
+	#summonerName = request.forms.get('summoner')
+	#summonerName = str(summonerName)
+	#summonerName = summonerName.lower()
 
 	#Consigue el ID del invocador
-	URL = "https://" + region + ".api.pvp.net/api/lol/" + region + "/v1.4/summoner/by-name/" + summonerName + "?api_key=" + APIKey
-	response = requests.get(URL)
-	responseJSON = response.json()
-	ID = responseJSON[summonerName]['id']
-	ID = str(ID)
+	#URL = "https://" + region + ".api.pvp.net/api/lol/" + region + "/v1.4/summoner/by-name/" + summonerName + "?api_key=" + APIKey
+	#response = requests.get(URL)
+	#responseJSON = response.json()
+	#ID = responseJSON[summonerName]['id']
+	#ID = str(ID)
 	# Conseguir el nivel del jugador y el ID del icono de perfil
-	URL2 = "https://" + region + ".api.pvp.net/api/lol/" + region + "/v1.4/summoner/" + ID + "?api_key=" + APIKey
-	response2 = requests.get(URL2)
-	response2JSON = response2.json()
-	level = response2JSON[ID]['summonerLevel']
-	level = str(level)
-	profileiconID = response2JSON[ID]['profileIconId']
-	profileiconID = str(profileiconID)
-	urlimageicon = "http://lkimg.zamimg.com/images/v2/summoner/icons/size64x64/"+ profileiconID + ".png"
+	#URL2 = "https://" + region + ".api.pvp.net/api/lol/" + region + "/v1.4/summoner/" + ID + "?api_key=" + APIKey
+	#response2 = requests.get(URL2)
+	#response2JSON = response2.json()
+	#level = response2JSON[ID]['summonerLevel']
+	#level = str(level)
+	#profileiconID = response2JSON[ID]['profileIconId']
+	#profileiconID = str(profileiconID)
+	#urlimageicon = "http://lkimg.zamimg.com/images/v2/summoner/icons/size64x64/"+ profileiconID + ".png"
 
 
 
@@ -100,30 +113,12 @@ def infosummoner():
 
 
 	# Estadisticas de las partidas en la season actual
-	URL6 = "https://euw.api.pvp.net/api/lol/euw/v1.3/stats/by-summoner/" + ID + "/summary?season=SEASON2016&api_key=" + APIKey
+	# URL6 = "https://euw.api.pvp.net/api/lol/euw/v1.3/stats/by-summoner/" + ID + "/summary?season=SEASON2016&api_key=" + APIKey
 
-	response6 = requests.get(URL6)
-	response6JSON = response6.json()
+	# response6 = requests.get(URL6)
+	#response6JSON = response6.json()
 
 	#stats = response6JSON['playerStatSummaries']
-
-
-
-	if response.status_code == 200 and response2.status_code == 200:
-		#return template('summoner.tpl', identificador=ID, invocador=summonerName, nivel=level, 
-		#	icono=urlimageicon, version=lastversion, free=freetoplays, iconos=iconos)
-		for i in iconos:
-			return i
-	elif response.status_code == 404:
-		notfound = "El nombre de invocador introducido no se encuentra en la region EUW."
-		return template('index2', notfound=notfound)
-	else:
-		return template('index2', notfound=notfound)
-
-	
-
-
-
 
 
 @route('/summoner')
