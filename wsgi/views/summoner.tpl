@@ -6,11 +6,11 @@
 <title>Profile</title>
 <link href="http://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css" />
 <!-- Included CSS Files -->
-<link rel="stylesheet" href="stylesheets/main.css" />
-<link rel="stylesheet" href="stylesheets/devices.css" />
-<link rel="stylesheet" href="stylesheets/paralax_slider.css" />
-<link rel="stylesheet" href="stylesheets/bxSlider.css" />
-<link rel="stylesheet" href="stylesheets/jquery.fancybox.css?v=2.1.2" type="text/css"  media="screen" />
+<link rel="stylesheet" href="static/stylesheets/main.css" />
+<link rel="stylesheet" href="static/stylesheets/devices.css" />
+<link rel="stylesheet" href="static/stylesheets/paralax_slider.css" />
+<link rel="stylesheet" href="static/stylesheets/bxSlider.css" />
+<link rel="stylesheet" href="static/stylesheets/jquery.fancybox.css?v=2.1.2" type="text/css"  media="screen" />
 <!--[if IE]>
 <link rel="stylesheet" href="stylesheets/ie.css"> 
 <![endif]-->
@@ -45,7 +45,7 @@
       </div>
       
       <!-- Previous and next selector --> 
-      <a id="prev" class="prev" href="#"><img alt="alt_example" src="./images/blank.gif" width="21" height="33" border="0" /></a> <a id="next" class="next" href="#"><img alt="alt_example" src="./images/blank.gif" width="21" height="33" border="0" /></a>
+      <a id="prev" class="prev" href="#"><img alt="alt_example" src="static/images/blank.gif" width="21" height="33" border="0" /></a> <a id="next" class="next" href="#"><img alt="alt_example" src="static/images/blank.gif" width="21" height="33" border="0" /></a>
       <ul id="hot_news_box">
         <li>
           <h2><a href="./post.html">RANKED_SOLO_5x5</a></h2>
@@ -123,7 +123,7 @@
 </div>
 <!--********************************************* Main wrapper end *********************************************--> 
 
-
+<!--
 <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script> 
 <script src="./javascript/jquery.carouFredSel-6.1.0.js" type="text/javascript"></script> 
 <script src="./javascript/jquery.cslider.js" type="text/javascript" ></script> 
@@ -131,7 +131,7 @@
 <script src="./javascript/getTweet.js" type="text/javascript" ></script> 
 <script src="./javascript/jquery.fancybox.js?v=2.1.3" type="text/javascript" ></script> 
 
-
+-->
 
 <!--******* Javascript Code for the menu *******-->
 
