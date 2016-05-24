@@ -114,13 +114,15 @@ def infosummoner():
 			gameandchamp.append(namechisplaying)
 
 		isplaying = "Esta en una partida " + str(gameandchamp[0]) + " jugando " + str(gameandchamp[1])
+		color = "verde"
 	else:
 		isplaying = "No esta jugando ninguna partida en este momento"
+		color = "rojo"
 
 
 
 
-	return template('summoner.tpl', name=name, nivel=nivel, urlimageicon=urlimageicon, isplaying=isplaying)
+	return template('summoner.tpl', name=name, nivel=nivel, urlimageicon=urlimageicon, isplaying=isplaying, color=color)
 	# queue -> RANKED_SOLO_5x5
 	# nombre de la liga 
 	# entries -> leaguePoints , division , losses , playerOrTeamName, wins
