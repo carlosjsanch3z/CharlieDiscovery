@@ -55,13 +55,10 @@ def index():
 		for elemento in xrange(4):
 			key = estados['services'][elemento]['name']
 			value = estados['services'][elemento]['status']
-			# 
+			# Para ver que funciona el color rojo en el CSS en caso de offline
 			if key == 'Client':
 				value = 'offline'
 			game[key] = value
-
-
-
 	return template('index.tpl', free=freetoplays, iconos=iconos, version=lastversion, game=game)
 
 
@@ -72,7 +69,24 @@ def index():
 
 @route('/summoner', method="POST")
 def infosummoner():
-	return template('summoner.tpl')
+
+	APIKey = {"api_key":"30ed66a9-fe04-4b57-ad61-871f1995cfb2"}
+	#Consigue el ID del invocador
+	summonerName = request.forms.get('summoner')
+	summonerName = str(summonerName.lower())
+	urlmasname = "https://euw.api.pvp.net/api/lol/euw/v1.4/summoner/by-name/"+summonerName
+	getid = requests.get('urlmasname',params=APIKey)
+
+	if getid.status_code == 200:
+		identificadorJSON = json.loads(getid.text)
+		ID = identificadorJSON[summonerName]['id']
+		name = identificadorJSON[summonerName]['name']
+		icon = identificadorJSON[summonerName]['profileIconId']
+		nivel = identificadorJSON[summonerName]['summonerLevel']
+		urlimageicon = "http://lkimg.zamimg.com/images/v2/summoner/icons/size64x64/"+ str(icon) + ".png"
+		return template('summoner.tpl', name=name, nivel=nivel, urlimageicon=urlimageicon)
+
+
 
 	# queue -> RANKED_SOLO_5x5
 	# nombre de la liga 
@@ -81,36 +95,7 @@ def infosummoner():
 	# tier
 
 
-
-
-
-
-	#APIKey = "30ed66a9-fe04-4b57-ad61-871f1995cfb2"
-	#region = "euw"
-	#summonerName = request.forms.get('summoner')
-	#summonerName = str(summonerName)
-	#summonerName = summonerName.lower()
-
-	#Consigue el ID del invocador
-	#URL = "https://" + region + ".api.pvp.net/api/lol/" + region + "/v1.4/summoner/by-name/" + summonerName + "?api_key=" + APIKey
-	#response = requests.get(URL)
-	#responseJSON = response.json()
-	#ID = responseJSON[summonerName]['id']
-	#ID = str(ID)
-	# Conseguir el nivel del jugador y el ID del icono de perfil
-	#URL2 = "https://" + region + ".api.pvp.net/api/lol/" + region + "/v1.4/summoner/" + ID + "?api_key=" + APIKey
-	#response2 = requests.get(URL2)
-	#response2JSON = response2.json()
-	#level = response2JSON[ID]['summonerLevel']
-	#level = str(level)
-	#profileiconID = response2JSON[ID]['profileIconId']
-	#profileiconID = str(profileiconID)
-	#urlimageicon = "http://lkimg.zamimg.com/images/v2/summoner/icons/size64x64/"+ profileiconID + ".png"
-
-
-
 	
-
 
 	# Estadisticas de las partidas en la season actual
 	# URL6 = "https://euw.api.pvp.net/api/lol/euw/v1.3/stats/by-summoner/" + ID + "/summary?season=SEASON2016&api_key=" + APIKey

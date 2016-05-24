@@ -25,7 +25,7 @@
   <div id="main_wrapper"> 
     
     <!--********************************************* Logo Start *********************************************-->
-    <div id="logo"> <a href="#"><img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/summoner/icons/size64x64/1109.png"  /></a>    </div>
+    <div id="logo"> <a href="#"><img alt="alt_example" src="{{urlimageicon}}"  /></a>    </div>
     
 
     <!--********************************************* Logo end *********************************************--> 
@@ -41,7 +41,7 @@
     <!--********************************************* Hot news start *********************************************-->
     <div id="hot_news">
       <div class="header">
-        <h1><span>invocador //</span> level</h1>
+        <h1><span>{{name}} //</span> Nivel {{nivel}}</h1>
       </div>
       
       <!-- Previous and next selector --> 
