@@ -53,7 +53,7 @@
           <div class="content" style="width: 125px;height: 100px;">
             <p>tier</p>
             <p>{{leagueofpoints}} LP</p>
-            <div class="info"> <a href="./post.html" class="comments"><span>{{wins5x5}}</span> wins</a> <a href="./post.html" class="comments"><span>{{losses5x5}}</span> losses</a> </div>
+            <div class="info"> <a href="./post.html" class="comments verde"><span>{{wins5x5}}</span> wins</a> <a href="./post.html" class="comments rojo"><span>{{losses5x5}}</span> losses</a> </div>
           </div>
         </li>
         <li>
