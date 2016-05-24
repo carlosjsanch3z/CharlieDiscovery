@@ -135,7 +135,7 @@ def infosummoner():
 		getleagueJSON = json.loads(getleague.text)
 		tier5x5 = getleagueJSON[ID][0]['tier']
 		division5x5 = getleagueJSON[ID][0]['entries'][0]['division']
-		division5x5 = str(tier5x5) + str(division5x5)
+		division5x5 = str(tier5x5) + " " + str(division5x5)
 		tier5x5 = tier5x5.lower()+"_1"
 		leagueofpoints5x5 = getleagueJSON[ID][0]['entries'][0]['leaguePoints']
 		leagueofpoints5x5 = str(leagueofpoints5x5) + " LP"

@@ -554,11 +554,15 @@ ul#hot_news_box li .content p{
 	margin:0px 0px 0px 0px;
 	padding:0px 0px 0px;
 	color:#99cccc;
+	font-size: 14px;
+	text-align: center;
 }
 ul#hot_news_box li .info{
-	width:155px;
+	width:43px;
 	height:35px;
-	margin:10px 0px 0px 0px;
+	font-size: 15px;
+	text-align: center;
+	margin:25px 0px 0px 10px;
 }
 ul#hot_news_box li a.comments{
 	float:left;

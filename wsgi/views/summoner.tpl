@@ -52,8 +52,9 @@
           <div class="image" style="width: 100px;height: 100px;"><a href="./post.html"><img alt="alt_example" src="http://lkimg.zamimg.com/images/medals/{{tier5x5}}.png"/></a></div>
           <div class="content" style="width: 125px;height: 100px;">
             <p>{{division5x5}}</p>
+            <br>
             <p>{{leagueofpoints}} LP</p>
-            <div class="info"> <a href="./post.html" class="comments verde"><span>{{wins5x5}}</span> wins</a> <a href="./post.html" class="comments rojo"><span>{{losses5x5}}</span> losses</a> </div>
+            <div class="info"> <a href="./post.html" class="comments verde"><span>{{wins5x5}}</span> W</a> <a href="./post.html" class="comments rojo"><span>{{losses5x5}}</span> L</a> </div>
           </div>
         </li>
         <li>
