@@ -558,19 +558,17 @@ ul#hot_news_box li .content p{
 	text-align: center;
 }
 ul#hot_news_box li .info{
-	width:43px;
+	width:155px;
 	height:35px;
-	font-size: 15px;
-	text-align: center;
-	margin:25px 0px 0px 10px;
+	margin:10px 0px 0px 0px;
 }
 ul#hot_news_box li a.comments{
 	float:left;
-	width:70px;
+	width:43px;
 	height:24px;
 	display:block;
-	font-size:10px;
-	padding:8px 5px 0px 0px;
+	font-size:15px;
+	padding:25px 5px 0px 9px;
 	/*color:#2ac0ff;*/
 	text-decoration:underline;
 	transition:color 0.35s ease-in-out;
