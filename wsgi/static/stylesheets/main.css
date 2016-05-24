@@ -243,7 +243,7 @@ span.blue {
 	text-align:center;
 	width:960px;
 	height:37px;
-	background:url(../images/social_ctn_loop.png) bottom left repeat-x;
+	/*background:url(../images/social_ctn_loop.png) bottom left repeat-x;*/
 }
 #social_ctn a {
 	display:inline-block;

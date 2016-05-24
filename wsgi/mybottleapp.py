@@ -41,14 +41,28 @@ def index():
 	#Conseguir la última versión del juego de una lista
 
 	requestversion = requests.get('https://global.api.pvp.net/api/lol/static-data/euw/v1.2/versions',params=APIKey)
-	getversion = json.loads(requestversion.text)
-	lastversion = str(getversion[0])
+	if requestversion.status_code == 200:
+		getversion = json.loads(requestversion.text)
+		lastversion = str(getversion[0])
+
+
+	# Conseguir los estados del servidor, tienda, pagina web, cliente
+	game={}
+	status = requests.get('http://status.leagueoflegends.com/shards/euw')
+	if status.status_code == 200:
+		estados = json.loads(status.text)
+
+		for elemento in xrange(4):
+			key = estados['services'][elemento]['name']
+			value = estados['services'][elemento]['status']
+			# CUIDAOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO con el moreno
+			if key == 'Game':
+				value = 'offline'
+			game[key] = value
 
 
 
-	return template('index.tpl', free=freetoplays, iconos=iconos, version=lastversion)
-
-
+	return template('index.tpl', free=freetoplays, iconos=iconos, version=lastversion, game=game)
 
 
 

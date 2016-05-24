@@ -14,6 +14,18 @@
 <link rel="stylesheet" href="stylesheets/ie.css"> 
 <![endif]-->
 
+<style type="text/css">
+
+.verde {
+  color: #20C715;
+}
+
+.rojo {
+  color: #E00404;
+}
+
+
+</style>
 
 </head>
 
@@ -83,10 +95,17 @@
         <div class="header"><a href="#">Estado del servidor</a></div>
         <div class="body">
           <p><img alt="alt_example" class="statuserver" src="static//images/serverstatus.png" align="left"/>
-            Estado del servidor: on/off
             <br>
             Version actual del juego: {{version}}
           </p>
+           
+          %  for key in game:
+          %  if game[key] == 'online':
+                <p>{{key}}: <a href="#" class="verde">{{game[key]}}</a></p>
+          % elif game[key] == 'offline':
+                <p>{{key}}: <a href="#" class="rojo">{{game[key]}}</a></p>
+          %   end
+          % end
         </div>
       </div>
       <div class="divider_footer"></div>
