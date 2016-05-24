@@ -1369,3 +1369,11 @@ a#cop_text:hover {
 	height: 60px;
 	margin-right: 100%;
 }
+
+.verde {
+  color: #20C715;
+}
+
+.rojo {
+  color: #E00404;
+}
