@@ -79,6 +79,8 @@ def infosummoner():
 	urlmasname = "https://euw.api.pvp.net/api/lol/euw/v1.4/summoner/by-name/"+summonerName
 	getid = requests.get(urlmasname,params=APIKey)
 	ID = 0
+	name = ""
+	nivel = 0
 	if getid.status_code == 200:
 		identificadorJSON = json.loads(getid.text)
 		ID = identificadorJSON[summonerName]['id']
@@ -122,18 +124,24 @@ def infosummoner():
 	# Sacar liga y division del jugador RANKED SOLO 5X5
 	URL1 = "https://euw.api.pvp.net/api/lol/euw/v2.5/league/by-summoner/"+str(ID)+"/entry"
 	getleague = requests.get(URL1,params=APIKey)
+	# Valores por defecto si no existen
 	leagueofpoints5x5 = "No rating"
-	tier = "unknown"
+	tier5x5 = "unknown"
+	losses5x5 = 0
+	wins5x5 = 0
+
 	if getleague.status_code == 200:
 		getleagueJSON = json.loads(getleague.text)
-		tier = getleagueJSON[ID][0]['tier']+"_1"
-		tier = tier.lower()
+		tier5x5 = getleagueJSON[ID][0]['tier']+"_1"
+		tier5x5 = tier5x5.lower()
 		leagueofpoints5x5 = getleagueJSON[ID][0]['entries'][0]['leaguePoints']
-		leagueofpoints5x5 = leagueofpoints5x5 + " LP"
+		leagueofpoints5x5 = str(leagueofpoints5x5) + " LP"
+		losses5x5 = getleagueJSON[ID][0]['entries'][0]['losses']
+		wins5x5 = getleagueJSON[ID][0]['entries'][0]['wins']
 
 
 
-	return template('summoner.tpl', name=name, nivel=nivel, urlimageicon=urlimageicon, isplaying=isplaying, color=color, leagueofpoints=leagueofpoints5x5, tier=tier)
+	return template('summoner.tpl', name=name, nivel=nivel, urlimageicon=urlimageicon, isplaying=isplaying, color=color, leagueofpoints=leagueofpoints5x5, tier5x5=tier5x5, losses5x5=losses5x5, wins5x5=wins5x5)
 	# queue -> RANKED_SOLO_5x5
 	# nombre de la liga 
 	# entries -> leaguePoints , division , losses , playerOrTeamName, wins

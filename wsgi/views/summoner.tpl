@@ -49,11 +49,11 @@
       <ul id="hot_news_box">
         <li>
           <h2><a href="./post.html">RANKED_SOLO_5x5</a></h2>
-          <div class="image" style="width: 100px;height: 100px;"><a href="./post.html"><img alt="alt_example" src="http://lkimg.zamimg.com/images/medals/{{tier}}.png"/></a></div>
+          <div class="image" style="width: 100px;height: 100px;"><a href="./post.html"><img alt="alt_example" src="http://lkimg.zamimg.com/images/medals/{{tier5x5}}.png"/></a></div>
           <div class="content" style="width: 125px;height: 100px;">
             <p>tier</p>
             <p>{{leagueofpoints}} LP</p>
-            <div class="info"> <a href="./post.html" class="comments"><span>18</span> wins</a> <a href="./post.html" class="comments"><span>18</span>losses</a> </div>
+            <div class="info"> <a href="./post.html" class="comments"><span>{{wins5x5}}</span> wins</a> <a href="./post.html" class="comments"><span>{{losses5x5}}</span> losses</a> </div>
           </div>
         </li>
         <li>
