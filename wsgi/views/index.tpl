@@ -94,10 +94,9 @@
       <div class="footer_widget">
         <div class="header"><a href="#">Estado del servidor</a></div>
         <div class="body">
-          <p><img alt="alt_example" class="statuserver" src="static//images/serverstatus.png" align="left"/>
+          <div><img alt="alt_example" class="statuserver" src="static//images/serverstatus.png" align="left"/>
             <br>
-            Version actual del juego: {{version}}
-          </p>
+          </div>
            
           %  for key in game:
           %  if game[key] == 'online':
@@ -107,6 +106,7 @@
           %   end
           % end
         </div>
+        <div class="footer">Version actual del juego: {{version}}</div>
       </div>
       <div class="divider_footer"></div>
       <div id="latest_media">
