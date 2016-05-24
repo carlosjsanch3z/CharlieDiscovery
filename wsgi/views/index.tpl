@@ -94,7 +94,7 @@
       <div class="footer_widget">
         <div class="header"><a href="#">Estado del servidor</a></div>
         <div class="body">
-          <div><img alt="alt_example" class="statuserver" src="static//images/serverstatus.png" align="left"/>
+          <div><img alt="alt_example" class="statuserver" src="static/images/serverstatus.png" align="left"/>
             <br>
           </div>
            
@@ -105,8 +105,9 @@
                 <p>{{key}}: <a href="#" class="rojo">{{game[key]}}</a></p>
           %   end
           % end
+                <p>Version actual del juego: {{version}}<p>
         </div>
-        <p>Version actual del juego: {{version}}<p>
+
       </div>
       <div class="divider_footer"></div>
       <div id="latest_media">
