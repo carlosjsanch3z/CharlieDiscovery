@@ -30,7 +30,7 @@
         <div id="menu">
           <div id="search">
             <form action="/summoner" method="post">
-            <input type="text" placeholder="Nombre del invocador" name="invocador" class="required" required/>
+            <input type="text" placeholder="Nombre del invocador" name="summoner" class="required" required/>
             <input type="submit" />
             </form>
           </div>
@@ -116,7 +116,7 @@
   </div>
   <!--********************************************* Main_in end *********************************************--> 
   
-  <a id="cop_text" href="http://themeforest.net/user/Skywarrior"> © 2016 Charlie Discovery Tool </a> 
+  <a id="cop_text" href="#"> © 2016 Charlie Discovery Tool </a> 
   </div>
 </div>
 <!--********************************************* Main wrapper end *********************************************--> 
