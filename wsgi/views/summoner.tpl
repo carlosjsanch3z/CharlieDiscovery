@@ -179,11 +179,11 @@
 </script>
 
 <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script> 
-<script src="./javascript/jquery.carouFredSel-6.1.0.js" type="text/javascript"></script>
-<script src="./javascript/jquery.cslider.js" type="text/javascript" ></script>  
-<script src="./javascript/jquery.bxSlider.min.js" type="text/javascript"></script> 
-<script src="./javascript/getTweet.js" type="text/javascript" ></script> 
-<script src="./javascript/jquery.fancybox.js?v=2.1.3" type="text/javascript" ></script> 
+<script src="static/javascript/jquery.carouFredSel-6.1.0.js" type="text/javascript"></script>
+<script src="static/javascript/jquery.cslider.js" type="text/javascript" ></script>  
+<script src="static/javascript/jquery.bxSlider.min.js" type="text/javascript"></script> 
+<script src="static/javascript/getTweet.js" type="text/javascript" ></script> 
+<script src="static/javascript/jquery.fancybox.js?v=2.1.3" type="text/javascript" ></script> 
 
 <!--******* Javascript Code for the Hot news carousel *******--> 
 <script type="text/javascript">
