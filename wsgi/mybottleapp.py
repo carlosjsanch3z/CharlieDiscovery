@@ -59,6 +59,7 @@ def index():
 			if key == 'Client':
 				value = 'offline'
 			game[key] = value
+
 	return template('index.tpl', free=freetoplays, iconos=iconos, version=lastversion, game=game)
 
 
@@ -77,18 +78,49 @@ def infosummoner():
 	summonerName = summonerName.lower()
 	urlmasname = "https://euw.api.pvp.net/api/lol/euw/v1.4/summoner/by-name/"+summonerName
 	getid = requests.get(urlmasname,params=APIKey)
-
+	ID = 0
 	if getid.status_code == 200:
 		identificadorJSON = json.loads(getid.text)
 		ID = identificadorJSON[summonerName]['id']
+		ID = str(ID)
 		name = identificadorJSON[summonerName]['name']
 		icon = identificadorJSON[summonerName]['profileIconId']
 		nivel = identificadorJSON[summonerName]['summonerLevel']
 		urlimageicon = "http://lkimg.zamimg.com/images/v2/summoner/icons/size64x64/"+ str(icon) + ".png"
-		return template('summoner.tpl', name=name, nivel=nivel, urlimageicon=urlimageicon)
+
+
+	# Consultar si el jugador esta jugando una partida o no, tipo de partida y con que campeon
+
+	colocarID = "https://euw.api.pvp.net/observer-mode/rest/consumer/getSpectatorGameInfo/EUW1/"+ str(ID)
+	playing = requests.get(colocarID,params=APIKey)
+
+	if playing.status_code == 200:
+		playingJSON = json.loads(playing.text)
+		gameandchamp = []
+		gamemode = playingJSON['gameMode']
+		gameandchamp.append(gamemode)
+		for elemento in range(len(playingJSON['participants'])):
+			if playingJSON['participants'][elemento]['summonerName'] == name:
+				whatchampisplaying = playingJSON['participants'][elemento]['championId']
+
+		# Ver el nombre del campeon con el que esta jugando con el ID sacado antes
+
+		champSEARCH = "https://global.api.pvp.net/api/lol/static-data/euw/v1.2/champion/"+ str(whatchampisplaying)
+		givemethename = requests.get(champSEARCH,params=APIKey)
+
+		if givemethename.status_code == 200:
+			champNAME = json.loads(givemethename.text)
+			namechisplaying = champNAME['name']
+			gameandchamp.append(namechisplaying)
+
+		isplaying = "Esta en una partida " + str(gameandchamp[0]) + " jugando " + str(gameandchamp[1])
+	else:
+		isplaying = "No esta jugando ninguna partida en este momento"
 
 
 
+
+	return template('summoner.tpl', name=name, nivel=nivel, urlimageicon=urlimageicon, isplaying=isplaying)
 	# queue -> RANKED_SOLO_5x5
 	# nombre de la liga 
 	# entries -> leaguePoints , division , losses , playerOrTeamName, wins
