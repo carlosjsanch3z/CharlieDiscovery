@@ -106,7 +106,7 @@
           %   end
           % end
         </div>
-        <div class="footer">Version actual del juego: {{version}}</div>
+        <p>Version actual del juego: {{version}}<p>
       </div>
       <div class="divider_footer"></div>
       <div id="latest_media">
