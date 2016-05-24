@@ -41,7 +41,7 @@
     <!--********************************************* Hot news start *********************************************-->
     <div id="hot_news">
       <div class="header">
-        <h1 class="{{color}}"><span>{{name}} //</span>{{isplaying}}</h1>
+        <h1 class="{{color}}"><span>{{name}} //</span> {{isplaying}}</h1>
       </div>
       
       <!-- Previous and next selector --> 
