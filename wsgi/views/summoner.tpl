@@ -62,6 +62,7 @@
           <div class="image" style="width: 100px;height: 100px;"><a href="#"><img alt="alt_example" src="static/images/ARAM.jpg"/></a></div>
           <div class="content" style="width: 125px;height: 100px;">
             <p>Kills: {{championkillsARAM}}</p>
+            <br>
             <p>Assits: {{totalAssistsARAM}}</p>
             <div class="info"> <a href="#" class="comments verde"><span>{{winsARAM}}</span> W</a></div>
           </div>
@@ -71,6 +72,7 @@
           <div class="image" style="width: 100px;height: 100px;"><a href="#"><img alt="alt_example" src="http://apollo-uploads-las.s3.amazonaws.com/1423606552482/184524-league-of-legends-urf-icon.png"/></a></div>
           <div class="content" style="width: 125px;height: 100px;">
             <p>Kills: {{championkillsURF}}</p>
+            <br>
             <p>Assits: {{totalAssistsURF}}</p>
             <div class="info"> <a href="./post.html" class="comments verde"><span>{{winsURF}}</span> W</a></div>
           </div>
@@ -95,8 +97,10 @@
         <!-- Right wrapper Start -->
         <div  id="right_wrapper">
           <div id="search">
-            <input type="text" onblur="if(this.value =='') this.value='search'" onfocus="if (this.value == 'search') this.value=''" value="search" name="s" class="required" id="s" />
-            <input type="button" />
+            <form action="/summoner" method="post">
+            <input type="text" placeholder="Buscar otro jugador" name="summoner" class="required" required/>
+            <input type="submit" />
+            </form>
           </div>
          </div>
           
