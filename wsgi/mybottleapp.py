@@ -81,6 +81,7 @@ def infosummoner():
 	ID = 0
 	name = ""
 	nivel = 0
+	urlimageicon = ""
 	if getid.status_code == 200:
 		identificadorJSON = json.loads(getid.text)
 		ID = identificadorJSON[summonerName]['id']
@@ -166,7 +167,7 @@ def infosummoner():
 
 
 
-	return template('summoner.tpl',estadistica=estadistica, winsARAM=winsARAM,championkillsARAM=championkillsARAM,totalAssistsARAM=totalAssistsARAM, name=name, nivel=nivel, urlimageicon=urlimageicon, isplaying=isplaying, color=color, leagueofpoints=leagueofpoints5x5, tier5x5=tier5x5, losses5x5=losses5x5, wins5x5=wins5x5, division5x5=division5x5)
+	return template('summoner.tpl',winsARAM=winsARAM,championkillsARAM=championkillsARAM,totalAssistsARAM=totalAssistsARAM, name=name, nivel=nivel, urlimageicon=urlimageicon, isplaying=isplaying, color=color, leagueofpoints=leagueofpoints5x5, tier5x5=tier5x5, losses5x5=losses5x5, wins5x5=wins5x5, division5x5=division5x5)
 
 
 
