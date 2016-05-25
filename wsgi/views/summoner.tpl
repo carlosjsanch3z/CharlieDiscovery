@@ -25,7 +25,12 @@
   <div id="main_wrapper"> 
     
     <!--********************************************* Logo Start *********************************************-->
-    <div id="logo"> <a href="#"><img alt="alt_example" src="{{urlimageicon}}"  /></a>    </div>
+    <div id="logo"> 
+      <a href="#">
+        <img alt="alt_example" src="{{urlimageicon}}"  />
+        <h1 class="beige">{{name}}</h1>
+      </a>    
+    </div>
     
 
     <!--********************************************* Logo end *********************************************--> 
@@ -39,6 +44,13 @@
         <li><a href="#">Partidas recientes</a></li>
         <li><a href="#">¿?</a></li>
       </ul>
+        <div id="search">
+            <form action="/summoner" method="post">
+            <input type="text" placeholder="Buscar otro jugador" name="summoner" class="required" required/>
+            <input type="submit" />
+            </form>
+        </div>
+      <div id="menu_right"></div>
       <div class="clear"></div>
     </div>
       
@@ -48,7 +60,7 @@
     <!--********************************************* Hot news start *********************************************-->
     <div id="hot_news">
       <div class="header">
-        <h1 class="{{color}}"><span>{{name}} //</span> {{isplaying}}</h1>
+        <h1 class="{{color}}"><span>//</span> {{isplaying}}</h1>
       </div>
       
       <!-- Previous and next selector --> 
@@ -88,37 +100,6 @@
     </div>
     <!--********************************************* Hot news end *********************************************--> 
     
-    <!--********************************************* Main start *********************************************-->
-    <div id="main_news_wrapper">
- 
-       <div id="row"> 
-        <!-- Left wrapper Start -->
-        <div id="wrapper">
-
-          
-          
-          <div class="clear"></div>
-         
-        <!-- Left wrapper end --> 
-        
-        <!-- Right wrapper Start -->
-        <div  id="right_wrapper">
-          <div id="search">
-            <form action="/summoner" method="post">
-            <input type="text" placeholder="Buscar otro jugador" name="summoner" class="required" required/>
-            <input type="submit" />
-            </form>
-          </div>
-         </div>
-          
-      
-      <!-- Right wrapper end -->
-      
-        </div>
-      	<div class="clear"></div>
-        
-        </div>
-      </div>
     
     <div class="bottom_shadow"></div>
   

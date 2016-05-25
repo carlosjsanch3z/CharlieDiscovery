@@ -235,7 +235,7 @@ span.blue {
 	text-align:center;
 }
 #logo img {
-	margin-top:70px;
+	margin-top:25px;
 	border:0;
 }
 #social_ctn {
@@ -1384,4 +1384,8 @@ a#cop_text:hover {
 
 .rojo {
   color: #E00404;
+}
+
+.beige {
+	color: #F5F5DC;
 }
