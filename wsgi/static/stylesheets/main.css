@@ -560,7 +560,7 @@ ul#hot_news_box li .content p{
 ul#hot_news_box li .info{
 	width:155px;
 	height:35px;
-	margin:10px 0px 0px 0px;
+	margin:10px 0px 0px 20px;
 }
 ul#hot_news_box li a.comments{
 	float:left;
