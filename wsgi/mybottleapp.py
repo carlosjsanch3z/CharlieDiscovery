@@ -174,10 +174,25 @@ def infosummoner():
 
 
 
+	# REQUEST GAME para sacar las ultimas partidas y toda la info
 
 
 	return template('summoner.tpl',totalAssistsURF=totalAssistsURF,championkillsURF=championkillsURF,winsURF=winsURF,winsARAM=winsARAM,championkillsARAM=championkillsARAM,totalAssistsARAM=totalAssistsARAM, name=name, nivel=nivel, urlimageicon=urlimageicon, isplaying=isplaying, color=color, leagueofpoints=leagueofpoints5x5, tier5x5=tier5x5, losses5x5=losses5x5, wins5x5=wins5x5, division5x5=division5x5)
 
+
+@route('/rol')
+def porcentajes():
+
+	URL = "https://euw.api.pvp.net/api/lol/euw/v2.2/matchlist/by-summoner/"+str(ID)
+	getmatchlist = requests.get(URL,params=APIKey)
+
+	getmatchlistJSON = ""
+	
+	if getmatchlist.status_code == 200:
+		getmatchlistJSON = json.loads(getmatchlist.text)
+
+
+	return template('roles.tpl',check=getmatchlistJSON)
 
 
 @route('/summoner')

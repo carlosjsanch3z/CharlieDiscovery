@@ -40,7 +40,7 @@
       <div id="menu_wrapper">
       <div id="menu_left"></div>
       <ul id="menu">
-        <li><a href="#">Ver % en posiciones</a></li>
+        <li><a href="/rol">Ver % en posiciones</a></li>
         <li><a href="#">Partidas recientes</a></li>
         <li><a href="#">¿?</a></li>
       </ul>
