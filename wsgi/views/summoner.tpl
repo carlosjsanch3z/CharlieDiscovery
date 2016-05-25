@@ -32,8 +32,15 @@
     
     <!--********************************************* Main_in Start *********************************************-->
     <div id="main_in"> 
-   
-
+      <div id="menu_wrapper">
+      <div id="menu_left"></div>
+      <ul id="menu">
+        <li><a href="#">Ver % en posiciones</a></li>
+        <li><a href="#">Partidas recientes</a></li>
+        <li><a href="#">¿?</a></li>
+      </ul>
+      <div class="clear"></div>
+    </div>
       
     
     <div class="top_shadow"></div>

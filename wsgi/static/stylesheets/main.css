@@ -304,6 +304,7 @@ ul#menu{
 }
 ul#menu li{
 	float:left;
+	width: 33%;
 	height:66px;
 	padding:0px 2px 0px 0px;
 	background:url(../images/menu_divider.jpg) top right no-repeat;
