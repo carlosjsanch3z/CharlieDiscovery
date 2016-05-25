@@ -63,7 +63,7 @@
           <div class="content" style="width: 125px;height: 100px;">
             <p>Kills: {{championkillsARAM}}</p>
             <p>Assits: {{totalAssistsARAM}}</p>
-            <div class="info"> <a href="#" class="comments verde"><span>{{winsARAM}}</span> wins</a></div>
+            <div class="info"> <a href="#" class="comments verde"><span>{{winsARAM}}</span> W</a></div>
           </div>
         </li>
         <li>
@@ -71,8 +71,8 @@
           <div class="image" style="width: 100px;height: 100px;"><a href="#"><img alt="alt_example" src="http://apollo-uploads-las.s3.amazonaws.com/1423606552482/184524-league-of-legends-urf-icon.png"/></a></div>
           <div class="content" style="width: 125px;height: 100px;">
             <p>Kills: {{championkillsURF}}</p>
-            <p>ssits: {{totalAssistsURF}}</p>
-            <div class="info"> <a href="./post.html" class="comments verde"><span>{{winsURF}}</span> wins</a></div>
+            <p>Assits: {{totalAssistsURF}}</p>
+            <div class="info"> <a href="./post.html" class="comments verde"><span>{{winsURF}}</span> W</a></div>
           </div>
         </li>
       </ul>
