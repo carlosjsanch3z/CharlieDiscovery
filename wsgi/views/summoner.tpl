@@ -59,7 +59,7 @@
         </li>
         <li>
           <h2><a href="./post.html">ARAM</a></h2>
-          <div class="image" style="width: 100px;height: 100px;"><a href="./post.html"><img alt="alt_example" src="http://lkimg.zamimg.com/images/medals/unknown.png"/></a></div>
+          <div class="image" style="width: 100px;height: 100px;"><a href="./post.html"><img alt="alt_example" src="static/images/ARAM.jpg"/></a></div>
           <div class="content" style="width: 125px;height: 100px;">
             <p>tier</p>
             <p>leaguePoints</p>
