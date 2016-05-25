@@ -86,7 +86,6 @@ def infosummoner():
 		ID = identificadorJSON[summonerName]['id']
 		ID = str(ID)
 		name = identificadorJSON[summonerName]['name']
-		#icon = identificadorJSON[summonerName]['profileIconId']
 		nivel = identificadorJSON[summonerName]['summonerLevel']
 		urlimageicon = "http://avatar.leagueoflegends.com/summonerId/euw/"+ ID + ".png"
 

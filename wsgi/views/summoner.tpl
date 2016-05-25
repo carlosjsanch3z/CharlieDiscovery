@@ -58,7 +58,7 @@
           </div>
         </li>
         <li>
-          <h2><a href="./post.html">TEAM 3v3</a></h2>
+          <h2><a href="./post.html">ARAM</a></h2>
           <div class="image" style="width: 100px;height: 100px;"><a href="./post.html"><img alt="alt_example" src="http://lkimg.zamimg.com/images/medals/unknown.png"/></a></div>
           <div class="content" style="width: 125px;height: 100px;">
             <p>tier</p>
@@ -67,8 +67,8 @@
           </div>
         </li>
         <li>
-          <h2><a href="./post.html">TEAM 5v5</a></h2>
-          <div class="image" style="width: 100px;height: 100px;"><a href="./post.html"><img alt="alt_example" src="http://lkimg.zamimg.com/images/medals/unknown.png"/></a></div>
+          <h2><a href="./post.html">URF</a></h2>
+          <div class="image" style="width: 100px;height: 100px;"><a href="./post.html"><img alt="alt_example" src="http://apollo-uploads-las.s3.amazonaws.com/1423606552482/184524-league-of-legends-urf-icon.png"/></a></div>
           <div class="content" style="width: 125px;height: 100px;">
             <p>tier</p>
             <p>leaguePoints</p>
