@@ -33,7 +33,7 @@
     <!--********************************************* Main_in Start *********************************************-->
     <div id="main_in"> 
    
-
+  
       
     
     <div class="top_shadow"></div>
@@ -58,12 +58,12 @@
           </div>
         </li>
         <li>
-          <h2><a href="./post.html">ARAM</a></h2>
+          <h2><a href="#">ARAM</a></h2>
           <div class="image" style="width: 100px;height: 100px;"><a href="./post.html"><img alt="alt_example" src="static/images/ARAM.jpg"/></a></div>
           <div class="content" style="width: 125px;height: 100px;">
-            <p>tier</p>
-            <p>leaguePoints</p>
-            <div class="info"> <a href="./post.html" class="comments"><span>18</span> wins</a> <a href="./post.html" class="comments"><span>18</span>losses</a> </div>
+            <p>Kills: {{championkillsARAM}}</p>
+            <p>Assits: {{totalAssistsARAM}}</p>
+            <div class="info"> <a href="#" class="comments"><span>{{winsARAM}}</span> wins</a></div>
           </div>
         </li>
         <li>

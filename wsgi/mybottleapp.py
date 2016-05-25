@@ -141,30 +141,39 @@ def infosummoner():
 		losses5x5 = getleagueJSON[ID][0]['entries'][0]['losses']
 		wins5x5 = getleagueJSON[ID][0]['entries'][0]['wins']
 
+	#Estadisticas de las partidas ARAM y URF
+
+	chorizaco = "https://euw.api.pvp.net/api/lol/euw/v1.3/stats/by-summoner/"+str(ID)+"/summary?season=SEASON2016"
+
+	getARAM = requests.get(chorizaco,params=APIKey)
+
+	#Definiendo variables antes
+
+	winsARAM = 0
+	championkillsARAM = 0
+	totalAssistsARAM = 0
+
+	if getARAM.status_code == 200:
+		getARAMJSON = json.loads(getARAM.text)
+		for elemento in range(len(getARAMJSON['playerStatSummaries'])):
+			if getARAMJSON['playerStatSummaries'][elemento]['playerStatSummaryType'] == "AramUnranked5x5":
+				winsARAM = getARAMJSON['playerStatSummaries'][elemento]['wins']
+				championkillsARAM = getARAMJSON['playerStatSummaries'][elemento]['aggregatedStats']['totalChampionKills']
+				totalAssistsARAM = getARAMJSON['playerStatSummaries'][elemento]['aggregatedStats']['totalAssists']
 
 
-	return template('summoner.tpl', name=name, nivel=nivel, urlimageicon=urlimageicon, isplaying=isplaying, color=color, leagueofpoints=leagueofpoints5x5, tier5x5=tier5x5, losses5x5=losses5x5, wins5x5=wins5x5, division5x5=division5x5)
-	# queue -> RANKED_SOLO_5x5
-	# nombre de la liga 
-	# entries -> leaguePoints , division , losses , playerOrTeamName, wins
-
-	# tier
 
 
-	
 
-	# Estadisticas de las partidas en la season actual
-	# URL6 = "https://euw.api.pvp.net/api/lol/euw/v1.3/stats/by-summoner/" + ID + "/summary?season=SEASON2016&api_key=" + APIKey
 
-	# response6 = requests.get(URL6)
-	#response6JSON = response6.json()
+	return template('summoner.tpl',estadistica=estadistica, winsARAM=winsARAM,championkillsARAM=championkillsARAM,totalAssistsARAM=totalAssistsARAM, name=name, nivel=nivel, urlimageicon=urlimageicon, isplaying=isplaying, color=color, leagueofpoints=leagueofpoints5x5, tier5x5=tier5x5, losses5x5=losses5x5, wins5x5=wins5x5, division5x5=division5x5)
 
-	#stats = response6JSON['playerStatSummaries']
 
 
 @route('/summoner')
 def fail():
 	return "No esta accediendo mediante el metodo POST"
+
 
 #No se ha encontrado la página
 @error(404)
