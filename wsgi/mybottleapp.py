@@ -154,6 +154,10 @@ def infosummoner():
 	championkillsARAM = 0
 	totalAssistsARAM = 0
 
+	winsURF = 0
+	championkillsURF = 0
+	totalAssistsURF = 0
+
 	if getARAM.status_code == 200:
 		getARAMJSON = json.loads(getARAM.text)
 		for elemento in range(len(getARAMJSON['playerStatSummaries'])):
@@ -162,12 +166,17 @@ def infosummoner():
 				championkillsARAM = getARAMJSON['playerStatSummaries'][elemento]['aggregatedStats']['totalChampionKills']
 				totalAssistsARAM = getARAMJSON['playerStatSummaries'][elemento]['aggregatedStats']['totalAssists']
 
+			if getARAMJSON['playerStatSummaries'][elemento]['playerStatSummaryType'] == "URF":
+							winsURF = getARAMJSON['playerStatSummaries'][elemento]['wins']
+							championkillsURF = getARAMJSON['playerStatSummaries'][elemento]['aggregatedStats']['totalChampionKills']
+							totalAssistsURF = getARAMJSON['playerStatSummaries'][elemento]['aggregatedStats']['totalAssists']
 
 
 
 
 
-	return template('summoner.tpl',winsARAM=winsARAM,championkillsARAM=championkillsARAM,totalAssistsARAM=totalAssistsARAM, name=name, nivel=nivel, urlimageicon=urlimageicon, isplaying=isplaying, color=color, leagueofpoints=leagueofpoints5x5, tier5x5=tier5x5, losses5x5=losses5x5, wins5x5=wins5x5, division5x5=division5x5)
+
+	return template('summoner.tpl',totalAssistsURF=totalAssistsURF,championkillsURF=championkillsURF,winsURF=winsURF,winsARAM=winsARAM,championkillsARAM=championkillsARAM,totalAssistsARAM=totalAssistsARAM, name=name, nivel=nivel, urlimageicon=urlimageicon, isplaying=isplaying, color=color, leagueofpoints=leagueofpoints5x5, tier5x5=tier5x5, losses5x5=losses5x5, wins5x5=wins5x5, division5x5=division5x5)
 
 
 

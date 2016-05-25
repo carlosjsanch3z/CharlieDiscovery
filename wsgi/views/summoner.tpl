@@ -33,7 +33,7 @@
     <!--********************************************* Main_in Start *********************************************-->
     <div id="main_in"> 
    
-  
+
       
     
     <div class="top_shadow"></div>
@@ -59,20 +59,20 @@
         </li>
         <li>
           <h2><a href="#">ARAM</a></h2>
-          <div class="image" style="width: 100px;height: 100px;"><a href="./post.html"><img alt="alt_example" src="static/images/ARAM.jpg"/></a></div>
+          <div class="image" style="width: 100px;height: 100px;"><a href="#"><img alt="alt_example" src="static/images/ARAM.jpg"/></a></div>
           <div class="content" style="width: 125px;height: 100px;">
             <p>Kills: {{championkillsARAM}}</p>
             <p>Assits: {{totalAssistsARAM}}</p>
-            <div class="info"> <a href="#" class="comments"><span>{{winsARAM}}</span> wins</a></div>
+            <div class="info"> <a href="#" class="comments verde"><span>{{winsARAM}}</span> wins</a></div>
           </div>
         </li>
         <li>
           <h2><a href="./post.html">URF</a></h2>
-          <div class="image" style="width: 100px;height: 100px;"><a href="./post.html"><img alt="alt_example" src="http://apollo-uploads-las.s3.amazonaws.com/1423606552482/184524-league-of-legends-urf-icon.png"/></a></div>
+          <div class="image" style="width: 100px;height: 100px;"><a href="#"><img alt="alt_example" src="http://apollo-uploads-las.s3.amazonaws.com/1423606552482/184524-league-of-legends-urf-icon.png"/></a></div>
           <div class="content" style="width: 125px;height: 100px;">
-            <p>tier</p>
-            <p>leaguePoints</p>
-            <div class="info"> <a href="./post.html" class="comments"><span>18</span> wins</a> <a href="./post.html" class="comments"><span>18</span>losses</a> </div>
+            <p>Kills: {{championkillsURF}}</p>
+            <p>ssits: {{totalAssistsURF}}</p>
+            <div class="info"> <a href="./post.html" class="comments verde"><span>{{winsURF}}</span> wins</a></div>
           </div>
         </li>
       </ul>
