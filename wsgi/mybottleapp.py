@@ -7,6 +7,8 @@ import requests
 
 #Pagina Principal - Donde se muestra el estado del servidor, la version del juego y los campeones gratuitos de la semana
 
+APIKey = {"api_key":"30ed66a9-fe04-4b57-ad61-871f1995cfb2"}
+
 @route('/')
 def index():
 
@@ -177,22 +179,25 @@ def infosummoner():
 	# REQUEST GAME para sacar las ultimas partidas y toda la info
 
 
-	return template('summoner.tpl',totalAssistsURF=totalAssistsURF,championkillsURF=championkillsURF,winsURF=winsURF,winsARAM=winsARAM,championkillsARAM=championkillsARAM,totalAssistsARAM=totalAssistsARAM, name=name, nivel=nivel, urlimageicon=urlimageicon, isplaying=isplaying, color=color, leagueofpoints=leagueofpoints5x5, tier5x5=tier5x5, losses5x5=losses5x5, wins5x5=wins5x5, division5x5=division5x5)
+	return template('summoner.tpl',ID=ID,totalAssistsURF=totalAssistsURF,championkillsURF=championkillsURF,winsURF=winsURF,winsARAM=winsARAM,championkillsARAM=championkillsARAM,totalAssistsARAM=totalAssistsARAM, name=name, nivel=nivel, urlimageicon=urlimageicon, isplaying=isplaying, color=color, leagueofpoints=leagueofpoints5x5, tier5x5=tier5x5, losses5x5=losses5x5, wins5x5=wins5x5, division5x5=division5x5)
 
 
-@route('/rol')
-def porcentajes():
+#@route('/rol/<ID>')
+#def porcentajes(ID=''):
+#	URL = "https://euw.api.pvp.net/api/lol/euw/v2.2/matchlist/by-summoner/%s"%ID
+#	getmatchlist = requests.get(URL,params=APIKey)
+#
+#	totalgames = 0
+#	check = []
+#	if getmatchlist.status_code == 200:
+#		getmatchlistJSON = json.loads(getmatchlist.text)
+#		totalgames = getmatchlistJSON['totalGames']
+#		for e in range(len(getmatchlistJSON['matches'][0])):
+#			lane = getmatchlistJSON['matches'][0][e]['lane']
+#			check.append(lane)
 
-	URL = "https://euw.api.pvp.net/api/lol/euw/v2.2/matchlist/by-summoner/"+str(ID)
-	getmatchlist = requests.get(URL,params=APIKey)
 
-	getmatchlistJSON = ""
-	
-	if getmatchlist.status_code == 200:
-		getmatchlistJSON = json.loads(getmatchlist.text)
-
-
-	return template('roles.tpl',check=getmatchlistJSON)
+#	return template('roles.tpl',check=check,totalgames=totalgames)
 
 
 @route('/summoner')
