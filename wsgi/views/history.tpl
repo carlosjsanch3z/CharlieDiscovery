@@ -60,13 +60,13 @@
                     <div id="header"> 
                         <div class="info">
                             % if i['win'] == "True":
-                                <h2 class="green">{{i['gameMode']}} 
+                                <h2><span class="green">{{i['gameMode']}} </span>
                                     <p>{{i['goldEarned']}} oro ganado | {{i['minionsKilled']}} minions | {{i['timePlayed']}}
                                     minutos
                                     </p>
                                 </h2>
                             % elif i['win'] == "False":
-                                <h2 class="red">{{i['gameMode']}} 
+                                <h2><span class="red">{{i['gameMode']}} </span>
                                     <p>{{i['goldEarned']}} oro ganado | {{i['minionsKilled']}} minions | {{i['timePlayed']}}
                                     minutos
                                     </p>
