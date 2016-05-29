@@ -261,7 +261,7 @@ def recents(ID=''):
 
 
 
-	return template('roles.tpl',check=history)
+	return template('history.tpl',check=history)
 
 @route('/summoner')
 def fail():
