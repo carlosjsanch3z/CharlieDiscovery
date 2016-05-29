@@ -6,10 +6,10 @@
 <title>Historial</title>
 <link href="http://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css" />
 <!-- Included CSS Files -->
-<link rel="stylesheet" href="./static/stylesheets/main.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-<link rel="stylesheet" href="./static/stylesheets/devices.css" type="text/css" media="screen" title="no title" charset="utf-8"  />
-<link rel="stylesheet" href="./static/stylesheets/post.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-<link rel="stylesheet" href="./static/stylesheets/validationEngine.jquery.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+<link rel="stylesheet" href="../static/stylesheets/main.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+<link rel="stylesheet" href="../static/stylesheets/devices.css" type="text/css" media="screen" title="no title" charset="utf-8"  />
+<link rel="stylesheet" href="../static/stylesheets/post.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+<link rel="stylesheet" href="../static/stylesheets/validationEngine.jquery.css" type="text/css" media="screen" title="no title" charset="utf-8" />
 <link rel="stylesheet" href="static/stylesheets/jquery.fancybox.css?v=2.1.2" type="text/css"  media="screen" />
 <!--[if IE ]>
 <link rel="stylesheet" href="stylesheets/ie.css"> 
