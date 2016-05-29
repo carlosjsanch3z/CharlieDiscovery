@@ -93,6 +93,45 @@
                     
                     <div class="clear"></div>
                </div>
+
+                <div id="post_wrapper">
+                
+                    <!-- Header Start -->
+                    <div id="header"> 
+                        <div class="info">
+                            
+                            <h2>Blade and soul open beta announced!</h2>
+                            <div class="date_n_author">by Admin in <a href="./post_list.html">Events</a>,   02 July 2012</div>
+                            
+                        </div>
+                        
+                        <div class="image">
+                            <div class="comments"> 18 </div>
+                            <div class="img_in"><img alt="alt_example" src="./images/post/post.jpg" /></div>
+                        </div>
+                        
+                    </div>
+                    <!-- Header end -->
+                    
+                    <!-- Body Start -->
+                    <div id="body">
+                        
+                        <div class="post-review">
+                            <div class="overall-score"><img alt="alt_example" src="./images/post/stars/big.png" /></div>
+                            <ul>
+                                <li>Gameplay <span class="score"><img alt="alt_example" src="./images/post/stars/3.png" /></span></li>
+                                <li>Story <span class="score"><img alt="alt_example" src="./images/post/stars/2.png" /></span></li>
+                                <li>Graphics <span class="score"><img alt="alt_example" src="./images/post/stars/4.png" /></span></li>
+                            </ul>
+                        </div>
+                        
+                        <p>Integer tincidunt tellus ut metus viverra ac sodales odio vulputate. Ut id erat neque, sit amet tristique erat. Vivamus in a. Duis hendrerit dui sed nibh vehicula ut pharetra mauris consectetur. Proin tempus fringilla nulla at convallis.</p>
+                    </div>
+                    <!-- Body end -->
+                    
+                    
+                    <div class="clear"></div>
+               </div>
                             
             </div>
             <!-- Left wrapper end -->
