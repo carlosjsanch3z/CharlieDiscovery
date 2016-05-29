@@ -71,6 +71,7 @@
                                     minutos
                                     </p>
                                 </h2>
+                            % end
                         </div>
                        <!-- <div class="image">
                             <div class="comments"> 18 </div>
