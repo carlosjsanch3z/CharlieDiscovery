@@ -94,7 +94,9 @@
                         <div class="post-review">
                             <div class="overall-score"><img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size48x48/{{i['championId']}}.png" /></div>
                             <ul>
-                                <li>{{i['championsKilled']}} / {{i['numDeaths']}} / {{i['assists']}}</li>
+                                <li>{{i['championsKilled']}} / {{i['numDeaths']}} / {{i['assists']}}
+                                <img src="http://matchhistory.euw.leagueoflegends.com/assets/1.0.11/css/resources/images/scoreboardicon_score.png">
+                                </li>
                                 <li>
                                     <img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/summoner/spells/size32x32/{{i['spell1']}}.png" />
                                     <img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/summoner/spells/size32x32/{{i['spell2']}}.png" />
