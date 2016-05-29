@@ -60,9 +60,11 @@
                     <div id="header"> 
                         <div class="info">
                             
-                            <h2>{{i['gameMode']}}</h2>
-                            <div class="date_n_author">{{i['goldEarned']}} oro ganado | {{i['minionsKilled']}} minions | {{i['timePlayed']}}
-                             minutos </div>
+                            <h2>{{i['gameMode']}} 
+                                <p>{{i['goldEarned']}} oro ganado | {{i['minionsKilled']}} minions | {{i['timePlayed']}}
+                                minutos
+                                </p>
+                            </h2>
                         </div>
                        <!-- <div class="image">
                             <div class="comments"> 18 </div>
@@ -94,20 +96,18 @@
 
                         <div class="post-panel">
                             <ul>
+                                % for k in i['team100']:
                                 <li>
-                                    <p></p>
+                                    <img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size32x32/{{i['team100'][k]}}.png" />
                                 </li>
-                                <li>
-                                    <p>dsdsdsdsdsds</p>
-                                </li>
+                                % end
                             </ul>
                             <ul>
+                                % for k in i['team200']:
                                 <li>
-                                    <p></p>
+                                    <img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size32x32/{{i['team200'][k]}}.png" />
                                 </li>
-                                <li>
-                                    <p>dsdsdsdsdsds</p>
-                                </li>
+                                % end
                             </ul>
                         </div>
                         
@@ -122,7 +122,6 @@
                             </ul>
                         </div>
                         
-                        <p>{{i}}</p>
                     </div>
 
                     <div class="clear"></div>

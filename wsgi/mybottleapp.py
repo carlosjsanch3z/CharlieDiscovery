@@ -197,8 +197,6 @@ def recents(ID=''):
 	URL = "https://euw.api.pvp.net/api/lol/euw/v1.3/game/by-summoner/%s/recent"%ID
 	getHISTORY = requests.get(URL,params=APIKey)
 	history = []
-	team100 = {}
-	team200 = {}
 
 	if getHISTORY.status_code == 200:
 		getHISTORYJSON = json.loads(getHISTORY.text)
@@ -256,11 +254,8 @@ def recents(ID=''):
 
 			summonerId = getHISTORYJSON['summonerId']
 			partida['summonerId'] = summonerId
-			
+
 			history.append(partida)
-
-
-		#Recorriendo los jugadores de la partida
 
 
 
