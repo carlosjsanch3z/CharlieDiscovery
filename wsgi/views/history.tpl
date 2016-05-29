@@ -78,41 +78,18 @@
                         <div class="post-panel">
                             <ul>
                                 <li>
-                                    <p></p>
-                                </li>
-                                <li>
-                                    <p>dsdsdsdsdsds</p>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    <p></p>
-                                </li>
-                                <li>
-                                    <p>dsdsdsdsdsds</p>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="post-panel">
-                            <ul>
                                 % for k in i['team100']:
-                                <li>
                                     <img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size32x32/{{i['team100'][k]}}.png" />
-                                </li>
                                 % end
+                                </li>
+                                <li>
+                                % for k in i['team200']:
+                                    <img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size32x32/{{i['team200'][k]}}.png" />
+                                % end
+                                </li>
                             </ul>
                         </div>
 
-                        <div class="post-panel">
-                            <ul>
-                                % for k in i['team200']:
-                                <li>
-                                    <img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size32x32/{{i['team200'][k]}}.png" />
-                                </li>
-                                % end
-                            </ul>
-                        </div>
                         
                         <div class="post-review">
                             <div class="overall-score"><img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size48x48/{{i['championId']}}.png" /></div>
