@@ -59,13 +59,13 @@
                     <!-- Header Start -->
                     <div id="header"> 
                         <div class="info">
-                            % if i['win'] == True:
+                            % if i['win'] == "True":
                                 <h2 class="verde">{{i['gameMode']}} 
                                     <p>{{i['goldEarned']}} oro ganado | {{i['minionsKilled']}} minions | {{i['timePlayed']}}
                                     minutos
                                     </p>
                                 </h2>
-                            % elif i['win'] == False:
+                            % elif i['win'] == "False":
                                 <h2 class="rojo">{{i['gameMode']}} 
                                     <p>{{i['goldEarned']}} oro ganado | {{i['minionsKilled']}} minions | {{i['timePlayed']}}
                                     minutos
