@@ -41,7 +41,6 @@
             <input type="submit" />
             </form>
         </div>
-      <div id="menu_right"></div>
       <div class="clear"></div>
     </div>
     
@@ -55,10 +54,7 @@
        <div id="row"> 
        <!-- Left wrapper Start -->
         <div id="hot_news">
-                <div class="header">
-                    <h2><span>ORIZON //</span> <a href="./post_list.html">GENERAL NEWS</a></h2>
-                </div>
-                 
+
                 <div id="post_wrapper">
                 
                     <!-- Header Start -->
