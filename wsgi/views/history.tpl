@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>Orizon - The Gaming template</title>
+<title>Calculator</title>
 
 <link href="http://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css" />
 <!-- Included CSS Files -->
@@ -57,13 +57,13 @@
        <!-- Left wrapper Start -->
         <div id="hot_news">
                 <div class="header">
-                	<h2><span>ORIZON //</span> <a href="./post_list.html">GENERAL NEWS</a></h2>
+                    <h2><span>ORIZON //</span> <a href="./post_list.html">GENERAL NEWS</a></h2>
                 </div>
                  
                 <div id="post_wrapper">
                 
-                	<!-- Header Start -->
-                	<div id="header"> 
+                    <!-- Header Start -->
+                    <div id="header"> 
                         <div class="info">
                             
                             <h2>Blade and soul open beta announced!</h2>
@@ -72,8 +72,8 @@
                         </div>
                         
                         <div class="image">
-                        	<div class="comments"> 18 </div>
-                        	<div class="img_in"><img alt="alt_example" src="./images/post/post.jpg" /></div>
+                            <div class="comments"> 18 </div>
+                            <div class="img_in"><img alt="alt_example" src="./images/post/post.jpg" /></div>
                         </div>
                         
                     </div>
@@ -81,7 +81,7 @@
                     
                     <!-- Body Start -->
                     <div id="body">
-                    	
+                        
                         <div class="post-review">
                             <div class="overall-score"><img alt="alt_example" src="./images/post/stars/big.png" /></div>
                             <ul>
@@ -89,9 +89,9 @@
                                 <li>Story <span class="score"><img alt="alt_example" src="./images/post/stars/2.png" /></span></li>
                                 <li>Graphics <span class="score"><img alt="alt_example" src="./images/post/stars/4.png" /></span></li>
                             </ul>
-						</div>
+                        </div>
                         
-                    	<p>Integer tincidunt tellus ut metus viverra ac sodales odio vulputate. Ut id erat neque, sit amet tristique erat. Vivamus in a. Duis hendrerit dui sed nibh vehicula ut pharetra mauris consectetur. Proin tempus fringilla nulla at convallis.</p>
+                        <p>Integer tincidunt tellus ut metus viverra ac sodales odio vulputate. Ut id erat neque, sit amet tristique erat. Vivamus in a. Duis hendrerit dui sed nibh vehicula ut pharetra mauris consectetur. Proin tempus fringilla nulla at convallis.</p>
                     </div>
                     <!-- Body end -->
                     
@@ -117,33 +117,13 @@
      
      <a id="cop_text" href="#"> © 2016 Charlie Discovery Tool </a>
      
-	</div>
+    </div>
 </div>
 <!--********************************************* Main wrapper end *********************************************--> 
 
 <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
-<script src="./javascript/getTweet.js" type="text/javascript" ></script>
-<script src="./javascript/jquery.validationEngine-en.js" type="text/javascript"></script>
-<script src="./javascript/jquery.validationEngine.js" type="text/javascript"></script>
-<script src="./javascript/jquery.fancybox.js?v=2.1.3" type="text/javascript" ></script>
-
-<!--******* Javascript Code for the comment form *******-->
-<script type="text/javascript">
-$(document).ready(function() {
-
-	// SUCCESS AJAX CALL, replace "success: false," by:     success : function() { callSuccessFunction() }, 
-	$("#form").validationEngine({
-		ajaxSubmit: true,
-			ajaxSubmitFile: "ajaxSubmit.php",
-			ajaxSubmitMessage: "Thank you, your post has been submitted!",
-		success :  false, ajaxSubmitMessage: "Thank you, your post has been submitted!",
-		failure : function() {}
-	})
-
-
-});
-</script>
-
+<script src="static/javascript/getTweet.js" type="text/javascript" ></script>
+<script src="static/javascript/jquery.fancybox.js?v=2.1.3" type="text/javascript" ></script>
 
 <!--******* Javascript Code for the image shadowbox *******-->
 <script type="text/javascript">
@@ -202,3 +182,4 @@ $(document).ready(function() {
 </script>
 </body>
 </html>
+
