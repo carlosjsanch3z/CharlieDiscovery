@@ -3,8 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>Calculator</title>
-
+<title>Historial</title>
 <link href="http://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css" />
 <!-- Included CSS Files -->
 <link rel="stylesheet" href="static/stylesheets/main.css" type="text/css" media="screen" title="no title" charset="utf-8" />
