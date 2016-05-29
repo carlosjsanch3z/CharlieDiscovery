@@ -50,7 +50,7 @@
 
 #post_wrapper{
 	/*width:600px;*/
-	background:#fff;
+	background:rgba(255, 255, 255, 0);
 	border:3px solid #25394a;
 	border-radius: 10px;
 	margin:10px 10px 30px 10px;
