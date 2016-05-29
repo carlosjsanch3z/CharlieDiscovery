@@ -56,7 +56,7 @@
             <div id="full_page_wrapper">
                     	
                 <div class="header">
-                	<h2><span> Informacion extraida de la SEASON 2015 </span> En un total de {{totalgames}} partidas</h2>
+                	<h2><span> Informacion extraida de la SEASON 2015 </span> En un total de X partidas</h2>
                 </div>
                  
                 <div id="post_wrapper">
@@ -64,11 +64,11 @@
                     
                     <!-- Body Start -->
                     <div id="body">
-                        <h3>Top</h3>
-                        <h4>Mid</h4>
-                        <h5>Jungle</h5>
-                        <h6>Bottom</h6>
-                        <p>{{check}}</p>
+
+                    % for e in range(len(check)):
+                        <div>{{check[e]}}</div>
+                    % end
+
                     </div>
                     <!-- Body end -->
                     

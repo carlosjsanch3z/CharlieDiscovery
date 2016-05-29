@@ -173,12 +173,6 @@ def infosummoner():
 							championkillsURF = getARAMJSON['playerStatSummaries'][elemento]['aggregatedStats']['totalChampionKills']
 							totalAssistsURF = getARAMJSON['playerStatSummaries'][elemento]['aggregatedStats']['totalAssists']
 
-
-
-
-	# REQUEST GAME para sacar las ultimas partidas y toda la info
-
-
 	return template('summoner.tpl',ID=ID,totalAssistsURF=totalAssistsURF,championkillsURF=championkillsURF,winsURF=winsURF,winsARAM=winsARAM,championkillsARAM=championkillsARAM,totalAssistsARAM=totalAssistsARAM, name=name, nivel=nivel, urlimageicon=urlimageicon, isplaying=isplaying, color=color, leagueofpoints=leagueofpoints5x5, tier5x5=tier5x5, losses5x5=losses5x5, wins5x5=wins5x5, division5x5=division5x5)
 
 
@@ -195,10 +189,79 @@ def infosummoner():
 #		for e in range(len(getmatchlistJSON['matches'][0])):
 #			lane = getmatchlistJSON['matches'][0][e]['lane']
 #			check.append(lane)
-
-
 #	return template('roles.tpl',check=check,totalgames=totalgames)
 
+
+@route('/history/<ID>')
+def recents(ID=''):
+	URL = "https://euw.api.pvp.net/api/lol/euw/v1.3/game/by-summoner/%s/recent"%ID
+	getHISTORY = requests.get(URL,params=APIKey)
+	history = []
+	team100 = {}
+	team200 = {}
+
+	if getHISTORY.status_code == 200:
+		getHISTORYJSON = json.loads(getHISTORY.text)
+		for elemento in range(5):
+			partida = {}
+			gameMode = getHISTORYJSON['games'][elemento]['gameMode']
+			championId = getHISTORYJSON['games'][elemento]['championId']
+			spell1 = getHISTORYJSON['games'][elemento]['spell1']
+			spell2 = getHISTORYJSON['games'][elemento]['spell2']
+			goldEarned = getHISTORYJSON['games'][elemento]['stats']['goldEarned']
+			assists = getHISTORYJSON['games'][elemento]['stats']['assists']
+			numDeaths = getHISTORYJSON['games'][elemento]['stats']['numDeaths']
+			championsKilled = getHISTORYJSON['games'][elemento]['stats']['championsKilled']
+			minionsKilled = getHISTORYJSON['games'][elemento]['stats']['minionsKilled']
+			win = getHISTORYJSON['games'][elemento]['stats']['win']
+			timePlayed = getHISTORYJSON['games'][elemento]['stats']['timePlayed']
+			team = getHISTORYJSON['games'][elemento]['stats']['team']
+			#Objetos comprados
+
+
+			# Guardando los valores en el diccionario
+
+			partida['gameMode'] = gameMode
+			partida['championId'] = championId
+			partida['spell1'] = spell1
+			partida['spell2'] = spell2
+			partida['goldEarned'] = goldEarned
+			partida['assists'] = assists
+			partida['numDeaths'] = numDeaths
+			partida['championsKilled'] = championsKilled
+			partida['minionsKilled'] = minionsKilled 
+			partida['win'] = win
+			partida['timePlayed'] = int(timePlayed/60)
+			partida['team'] = team
+
+			players100 = {}
+			players200 = {}
+
+			for i in range(len(getHISTORYJSON['games'][elemento]['fellowPlayers'])):
+				
+				if getHISTORYJSON['games'][elemento]['fellowPlayers'][i]['teamId'] == 100:
+
+					championId = getHISTORYJSON['games'][elemento]['fellowPlayers'][i]['championId']
+					summonerId = getHISTORYJSON['games'][elemento]['fellowPlayers'][i]['summonerId']
+					players100[summonerId] = championId
+
+				else:
+
+					championId = getHISTORYJSON['games'][elemento]['fellowPlayers'][i]['championId']
+					summonerId = getHISTORYJSON['games'][elemento]['fellowPlayers'][i]['summonerId']
+					players200[summonerId] = championId					
+
+			partida['team100'] = players100
+			partida['team200'] = players200
+
+			history.append(partida)
+
+
+		#Recorriendo los jugadores de la partida
+
+
+
+	return template('roles.tpl',check=history)
 
 @route('/summoner')
 def fail():
