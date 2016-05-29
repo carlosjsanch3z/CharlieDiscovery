@@ -6,11 +6,11 @@
 
 <link href="http://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css" />
 <!-- Included CSS Files -->
-<link rel="stylesheet" href="stylesheets/main.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-<link rel="stylesheet" href="stylesheets/devices.css" type="text/css" media="screen" title="no title" charset="utf-8"  />
-<link rel="stylesheet" href="stylesheets/post.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-<link rel="stylesheet" href="stylesheets/validationEngine.jquery.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-<link rel="stylesheet" href="stylesheets/jquery.fancybox.css?v=2.1.2" type="text/css"  media="screen" />
+<link rel="stylesheet" href="static/stylesheets/main.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+<link rel="stylesheet" href="static/stylesheets/devices.css" type="text/css" media="screen" title="no title" charset="utf-8"  />
+<link rel="stylesheet" href="static/stylesheets/post.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+<link rel="stylesheet" href="static/stylesheets/validationEngine.jquery.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+<link rel="stylesheet" href="static/stylesheets/jquery.fancybox.css?v=2.1.2" type="text/css"  media="screen" />
 <!--[if IE ]>
 <link rel="stylesheet" href="stylesheets/ie.css"> 
 <![endif]-->
@@ -23,20 +23,8 @@
 <div id="main_wrapper">
 
     <!--********************************************* Logo Start *********************************************-->
-    <div id="logo"> <a href="#"><img alt="alt_example" src="./images/logo.png"  /></a>
-      <div id="social_ctn"> 
-      
-      <a class="social_t"><img alt="alt_example" src="./images/social_tleft.png" /></a> 
-  
-      <a href="#" id="rss"><img alt="alt_example" src="./images/blank.gif" width="100%" height="37px" /></a> 
-      <a href="#" id="facebook"><img alt="alt_example" src="./images/blank.gif" width="100%" height="37px" /></a> 
-      <a href="#" id="twitter"><img alt="alt_example" src="./images/blank.gif" width="100%" height="37px" /></a>  
-      <a href="#" id="google_plus"><img alt="alt_example" src="./images/blank.gif" width="100%" height="37px" /></a>
-      <a href="#" id="you_tube"><img alt="alt_example" src="./images/blank.gif" width="100%" height="37px" /></a> 
-    
-      <a class="social_t" ><img alt="alt_example" src="./images/social_tright.png" /></a> 
-      
-      </div>
+    <div id="logo"> <a href="#"><img alt="alt_example" src="static//images/logo.png"  /></a>
+
     
     </div>
     <!--********************************************* Logo end *********************************************--> 
@@ -47,11 +35,6 @@
     <!--********************************************* Mainmenu Start *********************************************-->
       <div id="menu_wrapper">
       <div id="menu_left"></div>
-      <ul id="menu">
-        <li><a href="#">Ver % en posiciones</a></li>
-        <li><a href="/history/{{ID}}">Partidas Recientes</a></li>
-        <li><a href="#">¿?</a></li>
-      </ul>
         <div id="search">
             <form action="/summoner" method="post">
             <input type="text" placeholder="Buscar otro jugador" name="summoner" class="required" required/>
