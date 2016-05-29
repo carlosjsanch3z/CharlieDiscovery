@@ -93,12 +93,12 @@
                         </div>
                         
                         <div class="post-review">
-                            <div class="overall-score"><img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size32x32/{{i['championId']}}.png" /></div>
+                            <div class="overall-score"><img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size48x48/{{i['championId']}}.png" /></div>
                             <ul>
                                 <li>{{i['championsKilled']}} / {{i['numDeaths']}} / {{i['assists']}}</li>
                                 <li>
-                                    <img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/summoner/spells/size48x48/{{i['spell1']}}.png" />
-                                    <img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/summoner/spells/size48x48/{{i['spell2']}}.png" />
+                                    <img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/summoner/spells/size32x32/{{i['spell1']}}.png" />
+                                    <img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/summoner/spells/size32x32/{{i['spell2']}}.png" />
                                 </li>
                             </ul>
                         </div>
