@@ -254,6 +254,9 @@ def recents(ID=''):
 			partida['team100'] = players100
 			partida['team200'] = players200
 
+			summonerId = getHISTORYJSON['summonerId']
+			partida['summonerId'] = summonerId
+			
 			history.append(partida)
 
 

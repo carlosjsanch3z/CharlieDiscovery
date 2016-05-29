@@ -74,7 +74,7 @@
                     <div id="body">
                         
                         <div class="post-review">
-                            <div class="overall-score"><img alt="alt_example" src="./images/post/stars/big.png" /></div>
+                            <div class="overall-score"><img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size32x32/{{i['championId']}}.png" /></div>
                             <ul>
                                 <li>{{i['championsKilled']}} / {{i['numDeaths']}} / {{i['assists']}}</li>
                                 <li>
