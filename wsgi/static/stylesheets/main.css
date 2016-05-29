@@ -951,7 +951,8 @@ ul#pager li a.active{
 #search input[type="submit"]{
 	background:url(../images/search.jpg) top left no-repeat;
 	cursor:pointer;
-	border:none;	
+	border:none;
+	color: transparent;	
 	width:23px;
 	height:25px;
 	margin:0px 0px 0px 15px;

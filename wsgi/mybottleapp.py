@@ -202,7 +202,7 @@ def recents(ID=''):
 
 	if getHISTORY.status_code == 200:
 		getHISTORYJSON = json.loads(getHISTORY.text)
-		for elemento in range(5):
+		for elemento in range(len(getHISTORYJSON['games'])):
 			partida = {}
 			gameMode = getHISTORYJSON['games'][elemento]['gameMode']
 			championId = getHISTORYJSON['games'][elemento]['championId']
