@@ -102,6 +102,9 @@
                                 </li>
                                 % end
                             </ul>
+                        </div>
+
+                        <div class="post-panel">
                             <ul>
                                 % for k in i['team200']:
                                 <li>
