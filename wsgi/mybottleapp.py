@@ -228,7 +228,7 @@ def recents(ID=''):
 			partida['numDeaths'] = numDeaths
 			partida['championsKilled'] = championsKilled
 			partida['minionsKilled'] = minionsKilled 
-			partida['win'] = win
+			partida['win'] = str(win)
 			partida['timePlayed'] = int(timePlayed/60)
 			partida['team'] = team
 
