@@ -110,8 +110,9 @@
 
                         <div class="post-review">
                             <ul>
-                                <li>{{i['championsKilled']}} / {{i['numDeaths']}} / {{i['assists']}}
-                                <img src="http://matchhistory.euw.leagueoflegends.com/assets/1.0.11/css/resources/images/scoreboardicon_score.png">
+                                <li>
+                                    <p>{i['championsKilled']}} / {{i['numDeaths']}} / {{i['assists']}}
+                                <img src="http://matchhistory.euw.leagueoflegends.com/assets/1.0.11/css/resources/images/scoreboardicon_score.png"></p>{
                                 </li>
                                 <li>
                                     <img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/summoner/spells/size32x32/{{i['spell1']}}.png" />
