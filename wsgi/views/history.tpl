@@ -97,7 +97,7 @@
                                     % if i['team200'][k] == 163:
                                         <img alt="alt_example" src="http://ddragon.leagueoflegends.com/cdn/6.10.1/img/champion/Taliyah.png" />
                                     % else:
-                                        <img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size32x32/{{i['team100'][k]}}.png" />
+                                        <img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size32x32/{{i['team200'][k]}}.png" />
                                     % end
                                 % end
                                 </li>
