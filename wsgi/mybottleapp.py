@@ -254,9 +254,9 @@ def recents(ID=''):
 			partida['team200'] = players200
 
 			if team == 100:
-				players100[summonerId] = championId
+				players100[summonerId] = partida['championId']
 			elif team == 200:
-				players200[summonerId] = championId
+				players200[summonerId] = partida['championId']
 
 			history.append(partida)
 
