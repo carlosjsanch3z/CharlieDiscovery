@@ -60,11 +60,15 @@
                     <div id="header"> 
                         <div class="info">
                             % if i['win'] == "True":
-                                <h2><img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size48x48/{{i['championId']}}.png" /><span class="green">{{i['gameMode']}} </span>
+                                <img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size48x48/{{i['championId']}}.png" />
+                                <h2>{{i['gameMode']}}
                                     <p>{{i['goldEarned']}} oro ganado | {{i['minionsKilled']}} minions | {{i['timePlayed']}}
                                     minutos
                                     </p>
                                 </h2>
+                                <h1>
+                                    <span class="green">VICTORIA</span>
+                                </h1>
                             % elif i['win'] == "False":
                                 <h2><img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size48x48/{{i['championId']}}.png" /><span class="red">{{i['gameMode']}} </span>
                                     <p>{{i['goldEarned']}} oro ganado | {{i['minionsKilled']}} minions | {{i['timePlayed']}}
@@ -111,8 +115,8 @@
                         <div class="post-review">
                             <ul>
                                 <li>
-                                    <p>{i['championsKilled']}} / {{i['numDeaths']}} / {{i['assists']}}
-                                <img src="http://matchhistory.euw.leagueoflegends.com/assets/1.0.11/css/resources/images/scoreboardicon_score.png"></p>{
+                                    <p>{{i['championsKilled']}} / {{i['numDeaths']}} / {{i['assists']}}
+                                <img src="http://matchhistory.euw.leagueoflegends.com/assets/1.0.11/css/resources/images/scoreboardicon_score.png"></p>
                                 </li>
                                 <li>
                                     <img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/summoner/spells/size32x32/{{i['spell1']}}.png" />

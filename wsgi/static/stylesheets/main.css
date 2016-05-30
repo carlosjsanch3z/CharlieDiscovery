@@ -1400,3 +1400,8 @@ a#cop_text:hover {
 .blue {
 	color: blue;
 }
+
+.green-victory {
+	float: right;
+	color: #20C715;
+}
