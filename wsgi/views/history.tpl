@@ -59,6 +59,7 @@
                     <!-- Header Start -->
                     <div id="header"> 
                         <div class="info">
+                            <div class="left_wrapper">
                             % if i['win'] == "True":
                                 <img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size48x48/{{i['championId']}}.png" />
                                 <h2>{{i['gameMode']}}
@@ -66,9 +67,12 @@
                                     minutos
                                     </p>
                                 </h2>
+                            </div>
+                            <div class="right_wrapper">
                                 <h1>
-                                    <span class="green">VICTORIA</span>
+                                    <span class="green-victory">VICTORIA</span>
                                 </h1>
+                            </div>
                             % elif i['win'] == "False":
                                 <h2><img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size48x48/{{i['championId']}}.png" /><span class="red">{{i['gameMode']}} </span>
                                     <p>{{i['goldEarned']}} oro ganado | {{i['minionsKilled']}} minions | {{i['timePlayed']}}
