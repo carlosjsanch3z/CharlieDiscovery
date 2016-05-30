@@ -214,6 +214,7 @@ def recents(ID=''):
 			win = getHISTORYJSON['games'][elemento]['stats']['win']
 			timePlayed = getHISTORYJSON['games'][elemento]['stats']['timePlayed']
 			team = getHISTORYJSON['games'][elemento]['stats']['team']
+			summonerId = getHISTORYJSON['summonerId']
 			#Objetos comprados
 
 
@@ -252,8 +253,10 @@ def recents(ID=''):
 			partida['team100'] = players100
 			partida['team200'] = players200
 
-			summonerId = getHISTORYJSON['summonerId']
-			partida['summonerId'] = summonerId
+			if team == 100:
+				players100[summonerId] = championId
+			elif team == 200:
+				players200[summonerId] = championId
 
 			history.append(partida)
 
