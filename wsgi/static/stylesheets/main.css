@@ -1404,7 +1404,7 @@ a#cop_text:hover {
 .green-victory {
 	float: right;
 	color: #20C715;
-	margin-left: 30px;
+	margin-right: 30px;
 }
 
 .red-defeat {
@@ -1413,6 +1413,9 @@ a#cop_text:hover {
 	margin-right: 30px;
 }
 .taliyah {
-	width: 42px;
-	height: 42px;
+	width: 32px;
+}
+
+.white {
+	color: #fff;
 }

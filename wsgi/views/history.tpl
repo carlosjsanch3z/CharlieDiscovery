@@ -62,14 +62,14 @@
                             % if i['win'] == "True":
                                 <h2>
                                     <img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size48x48/{{i['championId']}}.png" />
-                                    {{i['gameMode']}}
+                                    <span>{{i['gameMode']}} </span>
                                     {{i['goldEarned']}} oro ganado <img src="http://matchhistory.euw.leagueoflegends.com/assets/1.0.11/css/resources/images/scoreboardicon_items.png"> {{i['minionsKilled']}} minions <img src="http://matchhistory.euw.leagueoflegends.com/assets/1.0.11/css/resources/images/scoreboardicon_minion.png"> {{i['timePlayed']}}
                                     minutos
                                     <span class="green-victory">VICTORIA</span>
                                 </h2>
                             % elif i['win'] == "False":
                                 <h2><img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size48x48/{{i['championId']}}.png" />
-                                    {{i['gameMode']}}
+                                    <span>{{i['gameMode']}} </span>
                                     {{i['goldEarned']}} oro ganado <img src="http://matchhistory.euw.leagueoflegends.com/assets/1.0.11/css/resources/images/scoreboardicon_items.png"> {{i['minionsKilled']}} minions <img src="http://matchhistory.euw.leagueoflegends.com/assets/1.0.11/css/resources/images/scoreboardicon_minion.png"> {{i['timePlayed']}}
                                     minutos
                                     <span class="red-defeat">DERROTA</span>
