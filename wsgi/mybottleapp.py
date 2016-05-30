@@ -78,6 +78,7 @@ def infosummoner():
 	summonerName = request.forms.get('summoner')
 	summonerName = str(summonerName)
 	summonerName = summonerName.lower()
+	summonerName = summonerName.replace(" ","")
 	urlmasname = "https://euw.api.pvp.net/api/lol/euw/v1.4/summoner/by-name/"+summonerName
 	getid = requests.get(urlmasname,params=APIKey)
 	ID = 0
@@ -219,7 +220,7 @@ def recents(ID=''):
 				minionsKilled = getHISTORYJSON['games'][elemento]['stats']['minionsKilled']
 			else:
 				minionsKilled = "0"
-				
+
 			win = getHISTORYJSON['games'][elemento]['stats']['win']
 			timePlayed = getHISTORYJSON['games'][elemento]['stats']['timePlayed']
 			team = getHISTORYJSON['games'][elemento]['stats']['team']
