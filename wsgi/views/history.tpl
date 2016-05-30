@@ -122,8 +122,7 @@
                         <div class="post-review">
                             <ul>
                                 <li>
-                                    <p>{{i['championsKilled']}} / {{i['numDeaths']}} / {{i['assists']}}
-                                <img src="http://matchhistory.euw.leagueoflegends.com/assets/1.0.11/css/resources/images/scoreboardicon_score.png"></p>
+                                    <p><span class="verde">{{i['championsKilled']}}</span> K <span class="rojo">{{i['numDeaths']}}</span> D <span class="orange">{{i['assists']}}</span> A</p>
                                 </li>
                                 <li>
                                     <img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/summoner/spells/size32x32/{{i['spell1']}}.png" />
