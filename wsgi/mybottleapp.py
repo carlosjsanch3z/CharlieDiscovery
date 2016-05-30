@@ -250,11 +250,6 @@ def recents(ID=''):
 					summonerId = getHISTORYJSON['games'][elemento]['fellowPlayers'][i]['summonerId']
 					players200[summonerId] = championId					
 
-			if team == 100:
-				players100[summonerId] = partida['championId']
-			elif team == 200:
-				players200[summonerId] = partida['championId']
-
 			partida['team100'] = players100
 			partida['team200'] = players200
 

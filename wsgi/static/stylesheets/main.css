@@ -1406,6 +1406,10 @@ a#cop_text:hover {
 	color: #20C715;
 }
 
+.red-defeat {
+	float: right;
+	color: #E00404;
+}
 .taliyah {
 	width: 42px;
 	height: 42px;

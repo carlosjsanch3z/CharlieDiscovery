@@ -23,7 +23,7 @@
 <div id="main_wrapper">
 
     <!--********************************************* Logo Start *********************************************-->
-    <div id="logo"> <a href="#"><img alt="alt_example" src="static//images/logo.png"  /></a>
+    <div id="logo">
 
     
     </div>
@@ -63,18 +63,15 @@
                                 <h2>
                                     <img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size48x48/{{i['championId']}}.png" />
                                     {{i['gameMode']}}
-                                    <p>{{i['goldEarned']}} oro ganado | {{i['minionsKilled']}} minions | {{i['timePlayed']}}
+                                    {{i['goldEarned']}} oro ganado | {{i['minionsKilled']}} minions | {{i['timePlayed']}}
                                     minutos
-                                    </p>
-                                    <p>
-                                        <span class="green-victory">VICTORIA</span>
-                                    </p>
+                                    <span class="green-victory">VICTORIA</span>
                                 </h2>
                             % elif i['win'] == "False":
                                 <h2><img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size48x48/{{i['championId']}}.png" /><span class="red">{{i['gameMode']}} </span>
-                                    <p>{{i['goldEarned']}} oro ganado | {{i['minionsKilled']}} minions | {{i['timePlayed']}}
+                                    {{i['goldEarned']}} oro ganado | {{i['minionsKilled']}} minions | {{i['timePlayed']}}
                                     minutos
-                                    </p>
+                                    <span class="red-defeat">DERROTA</span>
                                 </h2>
                             % end
                         </div>
