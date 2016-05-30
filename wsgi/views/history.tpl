@@ -60,13 +60,13 @@
                     <div id="header"> 
                         <div class="info">
                             % if i['win'] == "True":
-                                <h2><span class="green">{{i['gameMode']}} </span>
+                                <h2><img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size48x48/{{i['championId']}}.png" /><span class="green">{{i['gameMode']}} </span>
                                     <p>{{i['goldEarned']}} oro ganado | {{i['minionsKilled']}} minions | {{i['timePlayed']}}
                                     minutos
                                     </p>
                                 </h2>
                             % elif i['win'] == "False":
-                                <h2><span class="red">{{i['gameMode']}} </span>
+                                <h2><img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size48x48/{{i['championId']}}.png" /><span class="red">{{i['gameMode']}} </span>
                                     <p>{{i['goldEarned']}} oro ganado | {{i['minionsKilled']}} minions | {{i['timePlayed']}}
                                     minutos
                                     </p>
@@ -85,19 +85,6 @@
                         <div class="post-panel">
                             <ul>
                                 <li>
-                                    <p>Equipo azul</p>
-                                </li>
-                                <li>
-                                % for k in i['team100']:
-                                    <img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size32x32/{{i['team100'][k]}}.png" />
-                                % end
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="post-panel">
-                            <ul>
-                                <li>
                                     <p>Equipo morado</p>
                                 </li>
                                 <li>
@@ -108,9 +95,20 @@
                             </ul>
                         </div>
 
-                        
+                        <div class="post-panel">
+                            <ul>
+                                <li>
+                                    <p>Equipo azul</p>
+                                </li>
+                                <li>
+                                % for k in i['team100']:
+                                    <img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size32x32/{{i['team100'][k]}}.png" />
+                                % end
+                                </li>
+                            </ul>
+                        </div>
+
                         <div class="post-review">
-                            <div class="overall-score"><img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size48x48/{{i['championId']}}.png" /></div>
                             <ul>
                                 <li>{{i['championsKilled']}} / {{i['numDeaths']}} / {{i['assists']}}
                                 <img src="http://matchhistory.euw.leagueoflegends.com/assets/1.0.11/css/resources/images/scoreboardicon_score.png">

@@ -166,6 +166,8 @@
 
 #post_wrapper #body p{
 	margin:10px 0px 20px 0px;
+	text-align: center;
+	font-size: 16px;
 }
 
 #post_wrapper #body blockquote{
