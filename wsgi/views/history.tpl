@@ -85,9 +85,20 @@
                         <div class="post-panel">
                             <ul>
                                 <li>
+                                    <p>Equipo azul</p>
+                                </li>
+                                <li>
                                 % for k in i['team100']:
                                     <img alt="alt_example" src="http://lkimg.zamimg.com/images/v2/champions/icons/size32x32/{{i['team100'][k]}}.png" />
                                 % end
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="post-panel">
+                            <ul>
+                                <li>
+                                    <p>Equipo morado</p>
                                 </li>
                                 <li>
                                 % for k in i['team200']:
