@@ -85,7 +85,7 @@
                         <div class="post-panel">
                             <ul>
                                 <li>
-                                    <p>Equipo morado</p>
+                                    <p><span class="purple">Equipo morado</span></p>
                                 </li>
                                 <li>
                                 % for k in i['team200']:
@@ -98,7 +98,7 @@
                         <div class="post-panel">
                             <ul>
                                 <li>
-                                    <p>Equipo azul</p>
+                                    <p><span class="blue">Equipo azul</span></p>
                                 </li>
                                 <li>
                                 % for k in i['team100']:

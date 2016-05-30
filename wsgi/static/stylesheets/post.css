@@ -295,7 +295,7 @@
 
 .post-review {
 	float: right;
-	width: 200px;
+	width: 285px;
 	border: 1px solid #000;
 	margin:10px 0px 20px 10px;
 	border-radius: 5px;
@@ -329,7 +329,7 @@
 /*Añadido post-panel */
 .post-panel {
 	float: right;
-	width: 250px;
+	width: 285px;
 	border: 1px solid #000;
 	margin:10px 0px 20px 10px;
 	border-radius: 5px;
