@@ -315,7 +315,7 @@ ACCESS_TOKEN_URL = "https://api.twitter.com/oauth/access_token"
 CONSUMER_KEY = "cM9oUgu36V8Mh8b3guTqkuIQO"
 CONSUMER_SECRET = "HRQzNTjF6Nq0yj588A9FQ2DlN9wKEQjFnEhUrTUKPu0GQY0Ccx"
 
-TOKENS = {"access_token":"	737730447631888385-zO6Fyv2OxQ6vAyRbW1F79Z5YLZUTp2h","access_token_secret":"596lJOZqKqMOBc8vbnIkwp2Yxuze92KqlIClAe7o1oneS"}
+TOKENS = {"access_token":"737730447631888385-zO6Fyv2OxQ6vAyRbW1F79Z5YLZUTp2h","access_token_secret":"596lJOZqKqMOBc8vbnIkwp2Yxuze92KqlIClAe7o1oneS"}
 
 def get_request_token():
 	oauth = OAuth1(CONSUMER_KEY,client_secret=CONSUMER_SECRET,)
