@@ -269,13 +269,38 @@ def recents(ID=''):
 
 @route('/championswithS/<ID>')
 def full(ID=''):
+
 	URL = "https://euw.api.pvp.net/championmastery/location/EUW1/player/%s/champions"%ID
 	getS = requests.get(URL,params=APIKey)
+
+	#Conseguir los nombres de las imagenes de cada campeon para construir la URL de la imagen
+
+	payload1 = {"champData":"image","api_key":"30ed66a9-fe04-4b57-ad61-871f1995cfb2"}
+	url = requests.get('https://global.api.pvp.net/api/lol/static-data/euw/v1.2/champion',params=payload1)
 	Schamps = []
+	iconos = []
+
+
 	if getS.status_code == 200:
 		getSJSON = json.loads(getS.text)
 
-	return template('s.tpl')
+		for e in range(len(getSJSON)):
+			if getSJSON[e].has_key('highestGrade'):
+				if getSJSON[e]['highestGrade'] == "S" or getSJSON[e]['highestGrade'] == "S+" or getSJSON[e]['highestGrade'] == "S-":
+					championId = getSJSON[e]['championId']
+					Schamps.append(championId)
+
+	if url.status_code == 200:
+		imagenes = json.loads(url.text)
+	
+		for i in imagenes['data']:
+
+			if imagenes['data'][i]['id'] in Schamps:
+				imagefull = imagenes['data'][i]['image']['full']
+				rutaimagen = "http://ddragon.leagueoflegends.com/cdn/6.10.1/img/champion/" + imagefull
+				iconos.append(rutaimagen)
+
+	return template('s.tpl', iconos=iconos)
 
 
 @route('/summoner')

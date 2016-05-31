@@ -47,7 +47,6 @@
             </form>
         </div>
       <div id="menu_right"></div>
-      <div class="clear"></div>
     </div>
     
     <!--********************************************* Mainmenu end *********************************************--> 
@@ -65,18 +64,11 @@
                 
                 <!-- Gallery wrapper Start --> 
                 <ul id="gallery_wrapper">
-                	<li><a class="shadowbox fancybox.iframe" href="http://www.youtube.com/embed/BBBQnzWWPfE?autoplay=1" rel="main_gallery" ><img alt="alt_example" src="./images/media/thumb/1.jpg" /></a></li>
-                    <li><a class="shadowbox" href="./images/media/full/1.jpg" rel="gallery" ><img alt="alt_example" src="./images/media/thumb/1.jpg" /></a></li>
-                    <li><a class="shadowbox" href="./images/media/full/1.jpg" rel="gallery" ><img alt="alt_example" src="./images/media/thumb/1.jpg" /></a></li>
-                    <li><a class="shadowbox" href="./images/media/full/1.jpg" rel="gallery" ><img alt="alt_example" src="./images/media/thumb/1.jpg" /></a></li>
-                    <li><a class="shadowbox" href="./images/media/full/1.jpg" rel="gallery" ><img alt="alt_example" src="./images/media/thumb/1.jpg" /></a></li>
-                    <li><a class="shadowbox" href="./images/media/full/1.jpg" rel="gallery" ><img alt="alt_example" src="./images/media/thumb/1.jpg" /></a></li>
-                    <li><a class="shadowbox" href="./images/media/full/1.jpg" rel="gallery" ><img alt="alt_example" src="./images/media/thumb/1.jpg" /></a></li>
-                    <li><a class="shadowbox" href="./images/media/full/1.jpg" rel="gallery" ><img alt="alt_example" src="./images/media/thumb/1.jpg" /></a></li>
-                    <li><a class="shadowbox" href="./images/media/full/1.jpg" rel="gallery" ><img alt="alt_example" src="./images/media/thumb/1.jpg" /></a></li>
-                    <li><a class="shadowbox" href="./images/media/full/1.jpg" rel="gallery" ><img alt="alt_example" src="./images/media/thumb/1.jpg" /></a></li>
-                    <li><a class="shadowbox" href="./images/media/full/1.jpg" rel="gallery" ><img alt="alt_example" src="./images/media/thumb/1.jpg" /></a></li>
-                    <li><a class="shadowbox" href="./images/media/full/1.jpg" rel="gallery" ><img alt="alt_example" src="./images/media/thumb/1.jpg" /></a></li>
+                	<!--<li><a class="shadowbox fancybox.iframe" href="http://www.youtube.com/embed/BBBQnzWWPfE?autoplay=1" rel="main_gallery" ><img alt="alt_example" src="./images/media/thumb/1.jpg" /></a></li>-->
+                    % for image in iconos:
+                        <li><a class="shadowbox" href="#" rel="gallery" ><img alt="alt_example" src="{{image}}"/></a>
+                        </li>
+                    % end
                </ul>
                <!-- Gallery wrapper end --> 
                <div> 
