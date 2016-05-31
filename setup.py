@@ -6,5 +6,5 @@ setup(name='Charlie Discovery',
       author='Charlie',
       author_email='example@example.com',
       url='http://www.python.org/sigs/distutils-sig/',
-      install_requires=['bottle','requests','requests_oauthlib','tweepy'],
+      install_requires=['bottle','requests','requests_oauthlib','tweepy','setuptools'],
      )
