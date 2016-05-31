@@ -69,6 +69,9 @@
                         <li><a class="shadowbox" href="#" rel="gallery" ><img alt="alt_example" src="{{image}}"/></a>
                         </li>
                     % end
+                    %if not iconos:
+                        <p class="red"></p>
+                    %end
                </ul>
                <!-- Gallery wrapper end --> 
                <div> 
