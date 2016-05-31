@@ -25,7 +25,7 @@
 <div id="main_wrapper">
 
     <!--********************************************* Logo Start *********************************************-->
-    <div id="logo"> <a href="#"><img alt="alt_example" src="./images/logo.png"  /></a>
+    <div id="logo">
       <div id="social_ctn"> 
 
       
@@ -40,11 +40,6 @@
     <!--********************************************* Mainmenu Start *********************************************-->
       <div id="menu_wrapper">
       <div id="menu_left"></div>
-      <ul id="menu">
-        <li><a href="#">Ver campeones con S</a></li>
-        <li><a href="/history/{{ID}}">Partidas Recientes</a></li>
-        <li><a href="#">Tweetear</a></li>
-      </ul>
         <div id="search">
             <form action="/summoner" method="post">
             <input type="text" placeholder="Buscar otro jugador" name="summoner" class="required" required/>
