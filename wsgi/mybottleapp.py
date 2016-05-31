@@ -348,23 +348,23 @@ def twitter():
     return template('oauth1.tpl', authorize_url=authorize_url)
 
 @post('/twittear')
-    def tweet_submit():
-        TOKENS["access_token"]=request.get_cookie("access_token", secret='some-secret-key')
-        TOKENS["access_token_secret"]=request.get_cookie("access_token_secret", secret='some-secret-key')
-        #texto = request.forms.get("tweet")
-        texto = "Probando la api"
-        oauth = OAuth1(CONSUMER_KEY,
+def tweet_submit():
+    TOKENS["access_token"]=request.get_cookie("access_token", secret='some-secret-key')
+    TOKENS["access_token_secret"]=request.get_cookie("access_token_secret", secret='some-secret-key')
+    #texto = request.forms.get("tweet")
+    texto = "Probando la api"
+    oauth = OAuth1(CONSUMER_KEY,
                          client_secret=CONSUMER_SECRET,
                          resource_owner_key=TOKENS["access_token"],
                          resource_owner_secret=TOKENS["access_token_secret"])
-        url = 'https://api.twitter.com/1.1/statuses/update.json'
-        r = requests.post(url=url,
+    url = 'https://api.twitter.com/1.1/statuses/update.json'
+    r = requests.post(url=url,
                             data={"status":texto},
                             auth=oauth)
-        if r.status_code == 200:
-          return "Tweet properly sent"
-        else:
-          return "Unable to send tweet"
+    if r.status_code == 200:
+        return "Tweet properly sent"
+    else:
+        return "Unable to send tweet"
 
 # FIN TWEET
 
