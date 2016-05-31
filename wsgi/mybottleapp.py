@@ -4,8 +4,7 @@
 from bottle import route, default_app, get, post, run, template, error, request, static_file, response, redirect
 import json
 import requests
-from requests_oauthlib import OAuth1
-from urlparse import parse_qs
+
 
 APIKey = {"api_key":"30ed66a9-fe04-4b57-ad61-871f1995cfb2"}
 
