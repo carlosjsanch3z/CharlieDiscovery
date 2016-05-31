@@ -4,8 +4,10 @@
 from bottle import route, default_app, get, post, run, template, error, request, static_file, response
 import json
 import requests
-
-
+import tweepy
+import requests
+from requests_oauthlib import OAuth1
+from urlparse import parse_qs
 
 APIKey = {"api_key":"30ed66a9-fe04-4b57-ad61-871f1995cfb2"}
 
@@ -306,6 +308,28 @@ def full(ID=''):
 
 	return template('s.tpl', iconos=iconos,invocador=name)
 
+#Vamos a tweetear!
+
+@get('/escribepost')
+def twittear():
+	return template('tweet.tpl') 
+
+@route('/postear',method='POST')
+def postea():
+	cfg = { 
+		"consumer_key": "cM9oUgu36V8Mh8b3guTqkuIQO",
+		"consumer_secret": "HRQzNTjF6Nq0yj588A9FQ2DlN9wKEQjFnEhUrTUKPu0GQY0Ccx",
+		"access_token": "737730447631888385-zO6Fyv2OxQ6vAyRbW1F79Z5YLZUTp2h",
+		"access_token_secret": "596lJOZqKqMOBc8vbnIkwp2Yxuze92KqlIClAe7o1oneS" 
+	}
+	auth = tweepy.OAuthHandler(cfg['consumer_key'], cfg['consumer_secret'])
+ 	auth.set_access_token(cfg['access_token'], cfg['access_token_secret'])
+	#tweet = request.forms.get("tweet")
+	tweet = "Probando api.."
+	status = tweepy.API(auth).update_status(status=tweet)
+	return template('index.tpl')
+
+# FIN TWEET
 
 @route('/summoner')
 def fail():

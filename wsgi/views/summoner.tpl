@@ -42,7 +42,12 @@
       <ul id="menu">
         <li><a href="/championswithS/{{ID}}">Ver campeones con S</a></li>
         <li><a href="/history/{{ID}}">Partidas Recientes</a></li>
-        <li><a href="#">Tweetear</a></li>
+        <li>
+            <div class="form_submit">
+              <form action="/postear" method="post">
+                <input type="submit" value="post" class="read_more2">
+            </div>
+        </li>
       </ul>
         <div id="search">
             <form action="/summoner" method="post">
