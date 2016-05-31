@@ -192,8 +192,18 @@ def recents(ID=''):
 			spell1 = getHISTORYJSON['games'][elemento]['spell1']
 			spell2 = getHISTORYJSON['games'][elemento]['spell2']
 			goldEarned = getHISTORYJSON['games'][elemento]['stats']['goldEarned']
-			assists = getHISTORYJSON['games'][elemento]['stats']['assists']
-			numDeaths = getHISTORYJSON['games'][elemento]['stats']['numDeaths']
+			
+			
+
+			if getHISTORYJSON['games'][elemento]['stats'].has_key('numDeaths'):
+				numDeaths = getHISTORYJSON['games'][elemento]['stats']['numDeaths']
+			else:
+				numDeaths = "0"
+
+			if getHISTORYJSON['games'][elemento]['stats'].has_key('assists'):
+				assists = getHISTORYJSON['games'][elemento]['stats']['assists']
+			else:
+				assists = "0"
 
 			if getHISTORYJSON['games'][elemento]['stats'].has_key('championsKilled'):
 				championsKilled = getHISTORYJSON['games'][elemento]['stats']['championsKilled']
