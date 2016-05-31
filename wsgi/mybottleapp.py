@@ -306,7 +306,7 @@ def full(ID=''):
 	return template('s.tpl', iconos=iconos,invocador=name)
 
 #Vamos a tweetear!
-
+'''
 import tweepy
 
 @get('/escribepost')
@@ -328,7 +328,7 @@ def postea():
 	status = tweepy.API(auth).update_status(status=tweet)
 	return "Tweet enviado"
 
-
+'''
 
 
 
