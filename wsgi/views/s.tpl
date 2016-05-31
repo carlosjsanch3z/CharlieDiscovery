@@ -7,15 +7,15 @@
 
 <link href="http://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css" />
 <!-- Included CSS Files -->
-<link rel="stylesheet" href="stylesheets/main.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-<link rel="stylesheet" href="stylesheets/devices.css" type="text/css" media="screen" title="no title" charset="utf-8"  />
-<link rel="stylesheet" href="stylesheets/post.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-<link rel="stylesheet" href="stylesheets/validationEngine.jquery.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-<link rel="stylesheet" href="stylesheets/jquery.fancybox.css?v=2.1.2" type="text/css"  media="screen" />
+<link rel="stylesheet" href="../static/stylesheets/main.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+<link rel="stylesheet" href="../static/stylesheets/devices.css" type="text/css" media="screen" title="no title" charset="utf-8"  />
+<link rel="stylesheet" href="../static/stylesheets/post.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+<link rel="stylesheet" href="../static/stylesheets/validationEngine.jquery.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+<link rel="stylesheet" href="../static/stylesheets/jquery.fancybox.css?v=2.1.2" type="text/css"  media="screen" />
 <!--[if IE ]>
 <link rel="stylesheet" href="stylesheets/ie.css"> 
 <![endif]-->
-<link rel="icon" href="static/images/favicon.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../static/static/images/favicon.png" sizes="32x32" type="image/png">
 </head>
 
 <body>
@@ -99,8 +99,8 @@
 <!--********************************************* Main wrapper end *********************************************--> 
 
 <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
-<script src="./javascript/getTweet.js" type="text/javascript" ></script>
-<script src="./javascript/jquery.fancybox.js?v=2.1.3" type="text/javascript" ></script>
+<script src="../static/javascript/getTweet.js" type="text/javascript" ></script>
+<script src="../static/javascript/jquery.fancybox.js?v=2.1.3" type="text/javascript" ></script>
 
 <!--******* Javascript Code for the image shadowbox *******-->
 <script type="text/javascript">
