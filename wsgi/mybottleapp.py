@@ -1,10 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from bottle import route, default_app, get, post, run, template, error, request, static_file, response
+from bottle import route, default_app, get, post, run, template, error, request, static_file, response, redirect
 import json
-import requests
-import tweepy
 import requests
 from requests_oauthlib import OAuth1
 from urlparse import parse_qs
@@ -310,24 +308,63 @@ def full(ID=''):
 
 #Vamos a tweetear!
 
-@get('/escribepost')
-def twittear():
-	return template('tweet.tpl') 
+REQUEST_TOKEN_URL = "https://api.twitter.com/oauth/request_token"
+AUTHENTICATE_URL = "https://api.twitter.com/oauth/authenticate?oauth_token="
+ACCESS_TOKEN_URL = "https://api.twitter.com/oauth/access_token"
+ 
+CONSUMER_KEY = "cM9oUgu36V8Mh8b3guTqkuIQO"
+CONSUMER_SECRET = "HRQzNTjF6Nq0yj588A9FQ2DlN9wKEQjFnEhUrTUKPu0GQY0Ccx"
 
-@route('/postear',method='POST')
-def postea():
-	cfg = { 
-		"consumer_key": "cM9oUgu36V8Mh8b3guTqkuIQO",
-		"consumer_secret": "HRQzNTjF6Nq0yj588A9FQ2DlN9wKEQjFnEhUrTUKPu0GQY0Ccx",
-		"access_token": "737730447631888385-zO6Fyv2OxQ6vAyRbW1F79Z5YLZUTp2h",
-		"access_token_secret": "596lJOZqKqMOBc8vbnIkwp2Yxuze92KqlIClAe7o1oneS" 
-	}
-	auth = tweepy.OAuthHandler(cfg['consumer_key'], cfg['consumer_secret'])
- 	auth.set_access_token(cfg['access_token'], cfg['access_token_secret'])
-	#tweet = request.forms.get("tweet")
-	tweet = "Probando api.."
-	status = tweepy.API(auth).update_status(status=tweet)
-	return template('index.tpl')
+TOKENS = {"access_token":"	737730447631888385-zO6Fyv2OxQ6vAyRbW1F79Z5YLZUTp2h","access_token_secret":"596lJOZqKqMOBc8vbnIkwp2Yxuze92KqlIClAe7o1oneS"}
+
+def get_request_token():
+	oauth = OAuth1(CONSUMER_KEY,client_secret=CONSUMER_SECRET,)
+	r = requests.post(url=REQUEST_TOKEN_URL, auth=oauth)
+	credentials = parse_qs(r.content)
+	TOKENS["request_token"] = credentials.get('oauth_token')[0]
+	TOKENS["request_token_secret"] = credentials.get('oauth_token_secret')[0]
+            
+def get_access_token(TOKENS):
+          
+    oauth = OAuth1(CONSUMER_KEY,
+    client_secret=CONSUMER_SECRET,
+    resource_owner_key=TOKENS["request_token"],
+    resource_owner_secret=TOKENS["request_token_secret"],
+    verifier=TOKENS["verifier"],)
+          
+          
+    r = requests.post(url=ACCESS_TOKEN_URL, auth=oauth)
+    credentials = parse_qs(r.content)
+    TOKENS["access_token"] = credentials.get('oauth_token')[0]
+    TOKENS["access_token_secret"] = credentials.get('oauth_token_secret')[0]        
+
+        
+@get('/twitter')
+def twitter():
+    get_request_token()
+    authorize_url = AUTHENTICATE_URL + TOKENS["request_token"]
+    response.set_cookie("request_token", TOKENS["request_token"],secret='some-secret-key')
+    response.set_cookie("request_token_secret", TOKENS["request_token_secret"],secret='some-secret-key')
+    return template('oauth1.tpl', authorize_url=authorize_url)
+
+@post('/twittear')
+    def tweet_submit():
+        TOKENS["access_token"]=request.get_cookie("access_token", secret='some-secret-key')
+        TOKENS["access_token_secret"]=request.get_cookie("access_token_secret", secret='some-secret-key')
+        #texto = request.forms.get("tweet")
+        texto = "Probando la api"
+        oauth = OAuth1(CONSUMER_KEY,
+                         client_secret=CONSUMER_SECRET,
+                         resource_owner_key=TOKENS["access_token"],
+                         resource_owner_secret=TOKENS["access_token_secret"])
+        url = 'https://api.twitter.com/1.1/statuses/update.json'
+        r = requests.post(url=url,
+                            data={"status":texto},
+                            auth=oauth)
+        if r.status_code == 200:
+          return "Tweet properly sent"
+        else:
+          return "Unable to send tweet"
 
 # FIN TWEET
 

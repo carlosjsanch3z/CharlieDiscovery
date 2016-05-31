@@ -44,7 +44,7 @@
         <li><a href="/history/{{ID}}">Partidas Recientes</a></li>
         <li>
             <div class="form_submit">
-              <form action="/postear" method="post">
+              <form action="/twittear" method="post">
                 <input type="submit" value="post" class="read_more2">
             </div>
         </li>
