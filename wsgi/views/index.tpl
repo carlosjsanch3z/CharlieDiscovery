@@ -50,10 +50,10 @@
     <!--********************************************* Banner start *********************************************-->
     <div id="da-slider" class="da-slider">
       <div class="da-slide">
-        <h2><a href="#" class="da-link">Adbcdfef</a></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-          Ut iaculis lorem vitae arcu elementum pellentesque. <br />
-          Praesent pellentesque ornare neque id lobortis.</p>
+        <h2><a href="#" class="da-link">¿Qué es Charlie Discovery?</a></h2>
+        <p>Bienvenidos a League of Legends, invocadores.<br />
+          Aquí encontraréis la información básica, <br />
+          sobre cada invocador dentro del juego.</p>
         <div class="da-img"><img alt="alt_example" src="http://lkimg.zamimg.com/images/home/widget/xerath_widget_01.jpg"  /></div>
       </div>
       <div class="da-slide">
