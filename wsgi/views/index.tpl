@@ -57,14 +57,14 @@
         <div class="da-img"><img alt="alt_example" src="http://lkimg.zamimg.com/images/home/widget/xerath_widget_01.jpg"  /></div>
       </div>
       <div class="da-slide">
-        <h2><a href="#" class="da-link">dsdsdsds</a></h2>
-        <p>Phasellus ac leo turpis. Morbi at pulvinar augue. <br />
-          Aenean rhoncus ultrices volutpat. Vivamus eget enim ut orci iaculis condimentum sed a quam. </p>
+        <h2><a href="#" class="da-link">Estadísticas ARAMs & URF</a></h2>
+        <p>Observa información referente a las partidas. <br />
+          Aram y URF de un jugador específico. </p>
         <div class="da-img"><img alt="alt_example" src="http://lkimg.zamimg.com/images/home/widget/fizz_widget_01.jpg"  /></div>
       </div>
       <div class="da-slide">
-        <h2><a href="#" class="da-link">dsdsdsds</a></h2>
-        <p>Etiam eu massa lectus. Nunc mi velit, commodo ut ullamcorper et, consectetur vel dolor. Etiam tincidunt convallis metus non suscipit.</p>
+        <h2><a href="#" class="da-link">Historial del jugador</a></h2>
+        <p>Y ahora tambien podrás ver las estadísticas de las 5 últimas partidas de un invocador.</p>
         <div class="da-img"><img alt="alt_example" src="http://lkimg.zamimg.com/images/home/widget/ezreal_widget_03.jpg"  /></div>
       </div>
       <div class="da-arrows"> <span class="da-arrows-prev"></span> <span class="da-arrows-next"></span> </div>
