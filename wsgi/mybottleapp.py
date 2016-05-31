@@ -266,7 +266,7 @@ def full(ID=''):
 
 	if getname.status_code == 200:
 		getnameJSON = json.loads(getname.text)
-		name = getnameJSON[summonerName]['name']
+		name = getnameJSON[ID]['name']
 	#Conseguir los nombres de las imagenes de cada campeon para construir la URL de la imagen
 
 	payload1 = {"champData":"image","api_key":"30ed66a9-fe04-4b57-ad61-871f1995cfb2"}
