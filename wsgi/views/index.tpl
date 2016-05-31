@@ -34,10 +34,6 @@
             <input type="submit" />
             </form>
           </div>
-          <div class="form_submit">
-              <form action="/advice" method="post">
-                <input type="submit" value="post" class="read_more2">
-          </div>
         </div>
       </div>
       <div class="clear"></div>

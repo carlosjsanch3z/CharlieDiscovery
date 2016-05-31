@@ -333,7 +333,10 @@ def postea():
 
 
 # FIN TWEET
-
+@route('/advice')
+def twittear():
+	return template('advice.tpl')
+	
 @route('/summoner')
 def fail():
 	return "No esta accediendo mediante el metodo POST"
