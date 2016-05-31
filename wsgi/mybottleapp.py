@@ -5,13 +5,13 @@ from bottle import route, default_app, get, post, run, template, error, request,
 import json
 import requests
 
-#Pagina Principal - Donde se muestra el estado del servidor, la version del juego y los campeones gratuitos de la semana
+
 
 APIKey = {"api_key":"30ed66a9-fe04-4b57-ad61-871f1995cfb2"}
 
 @route('/')
 def index():
-
+	#Pagina Principal - Donde se muestra el estado del servidor, la version del juego y los campeones gratuitos de la semana
 	APIKey = {"api_key":"30ed66a9-fe04-4b57-ad61-871f1995cfb2"}
 	#Sacar los IDS de los campeones que estan gratuitos para jugar esta semana
 	payload = {"freeToPlay":"true","api_key":"30ed66a9-fe04-4b57-ad61-871f1995cfb2"}
@@ -264,10 +264,19 @@ def recents(ID=''):
 			partida['team200'] = players200
 
 			history.append(partida)
-
-
-
 	return template('history.tpl',check=history)
+
+
+@route('/championswithS/<ID>')
+def full(ID=''):
+	URL = "https://euw.api.pvp.net/championmastery/location/EUW1/player/%s/champions"%ID
+	getS = requests.get(URL,params=APIKey)
+	Schamps = []
+	if getS.status_code == 200:
+		getSJSON = json.loads(getS.text)
+
+	return template('s.tpl')
+
 
 @route('/summoner')
 def fail():
