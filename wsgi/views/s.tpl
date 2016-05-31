@@ -59,7 +59,7 @@
             <div id="full_page_wrapper">
                     	
                 <div class="header">
-                	<h2><span>Nombre del jugador //</span> tiene una S con los siguientes campeones:</h2>
+                	<h2><span>El jugador: {{invocador}},</span> tiene una S con los siguientes campeones:</h2>
                 </div>
                 
                 <!-- Gallery wrapper Start --> 

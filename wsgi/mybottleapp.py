@@ -177,22 +177,6 @@ def infosummoner():
 	return template('summoner.tpl',ID=ID,totalAssistsURF=totalAssistsURF,championkillsURF=championkillsURF,winsURF=winsURF,winsARAM=winsARAM,championkillsARAM=championkillsARAM,totalAssistsARAM=totalAssistsARAM, name=name, nivel=nivel, urlimageicon=urlimageicon, isplaying=isplaying, color=color, leagueofpoints=leagueofpoints5x5, tier5x5=tier5x5, losses5x5=losses5x5, wins5x5=wins5x5, division5x5=division5x5)
 
 
-#@route('/rol/<ID>')
-#def porcentajes(ID=''):
-#	URL = "https://euw.api.pvp.net/api/lol/euw/v2.2/matchlist/by-summoner/%s"%ID
-#	getmatchlist = requests.get(URL,params=APIKey)
-#
-#	totalgames = 0
-#	check = []
-#	if getmatchlist.status_code == 200:
-#		getmatchlistJSON = json.loads(getmatchlist.text)
-#		totalgames = getmatchlistJSON['totalGames']
-#		for e in range(len(getmatchlistJSON['matches'][0])):
-#			lane = getmatchlistJSON['matches'][0][e]['lane']
-#			check.append(lane)
-#	return template('roles.tpl',check=check,totalgames=totalgames)
-
-
 @route('/history/<ID>')
 def recents(ID=''):
 	URL = "https://euw.api.pvp.net/api/lol/euw/v1.3/game/by-summoner/%s/recent"%ID
@@ -270,9 +254,19 @@ def recents(ID=''):
 @route('/championswithS/<ID>')
 def full(ID=''):
 
+	# Conseguir los campeones con S
 	URL = "https://euw.api.pvp.net/championmastery/location/EUW1/player/%s/champions"%ID
 	getS = requests.get(URL,params=APIKey)
 
+	# Sacar el nombre del jugador
+	URL1 = "https://euw.api.pvp.net/api/lol/euw/v1.4/summoner/%s"%ID
+	getname = requests.get(URL1,params=APIKey)
+
+	name = ""
+
+	if getname.status_code == 200:
+		getnameJSON = json.loads(getname.text)
+		name = getnameJSON[summonerName]['name']
 	#Conseguir los nombres de las imagenes de cada campeon para construir la URL de la imagen
 
 	payload1 = {"champData":"image","api_key":"30ed66a9-fe04-4b57-ad61-871f1995cfb2"}
@@ -300,7 +294,7 @@ def full(ID=''):
 				rutaimagen = "http://ddragon.leagueoflegends.com/cdn/6.10.1/img/champion/" + imagefull
 				iconos.append(rutaimagen)
 
-	return template('s.tpl', iconos=iconos)
+	return template('s.tpl', iconos=iconos,invocador=name)
 
 
 @route('/summoner')
