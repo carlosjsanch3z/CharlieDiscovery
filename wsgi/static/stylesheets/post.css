@@ -1,12 +1,19 @@
 @charset "utf-8";
 
+@font-face {
+	font-family: 'Friz Quadrata';
+	font-style: normal;
+	font-weight: 400;
+	src: url(fonts/ufonts.com_friz-quadrata_tt) format('ttf');
+}
+
 /* -----------------------------------------
   Headers
 ----------------------------------------- */
 
 #post_wrapper h1, #post_wrapper h2, #post_wrapper h3, #post_wrapper h4, #post_wrapper h5, #post_wrapper h6{
 	text-shadow: none;
-	font-family: 'Oswald', Helvetica, Arial, sans-serif;
+	font-family: 'Friz Quadrata';
 	font-weight: 700;
 	text-transform: uppercase;
 
@@ -114,7 +121,7 @@
 	bottom:-13px;
 	right:20px;
 	color:#fff;
-	font-family:'Oswald', Helvetica,  Arial, sans-serif;
+	font-family:'Friz Quadrata';
 	font-weight:700;
 	padding:5px 0px 0px 13px;
 }
@@ -133,7 +140,7 @@
 
 #post_wrapper .info h2{
 	text-shadow:none;
-	font-family:'Oswald', Helvetica,  Arial, sans-serif;
+	font-family:'Friz Quadrata';
 	background:none;
 	display:block;
 	width:100%;
@@ -198,7 +205,7 @@
 	width:330px;
 	background:url(../images/post/comments_header_bg.png) top left no-repeat;
 	text-shadow: 0px 2px 3px rgba(0, 0, 0, 1);
-	font-family:'Oswald', Helvetica,  Arial, sans-serif;
+	font-family:'Friz Quadrata';
 	color:#fff;
 	font-size:13px;
 	font-weight:700;
