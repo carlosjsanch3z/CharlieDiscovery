@@ -22,9 +22,11 @@
     </header>
 
     <div class="main-content">
-        <!-- <a href="#" class="form-log-in-with-existing">Se ha avisado a los jugadores correctamente →</a> -->
         <!-- You only need this form and the form-basic.css -->
-
+        % if {{ole}}:
+        <a href="#" class="form-log-in-with-existing">{{ole}}</a>
+        <br>
+        % end
         <form class="form-basic" action="/twittear" method="post">
 
             <div class="form-title-row">
