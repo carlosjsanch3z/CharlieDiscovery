@@ -1379,6 +1379,7 @@ a#cop_text:hover {
 	width: 60px;
 	height: 60px;
 	margin-right: 100%;
+	text-align: left;
 }
 
 .verde {

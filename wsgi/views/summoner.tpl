@@ -42,7 +42,7 @@
       <ul id="menu">
         <li><a href="/championswithS/{{ID}}">Ver campeones con S</a></li>
         <li><a href="/history/{{ID}}">Partidas Recientes</a></li>
-        <li><a href="/advice">Twittear</a></li>
+        <li><a href="/advice">Avisar por twitter</a></li>
       </ul>
         <div id="search">
             <form action="/summoner" method="post">

@@ -81,7 +81,7 @@
       <div class="footer_widget">
         <div class="header"><a href="#">Estado del servidor</a></div>
         <div class="body">
-          <div><img alt="alt_example" class="statuserver" src="static/images/serverstatus.png" align="left"/>
+          <div><img alt="status" class="statuserver" src="static/images/serverstatus.png"/>
             <br>
           </div>
            
@@ -102,7 +102,7 @@
         <div class="body">
           <ul id="l_media_list">
             % for i in iconos:
-            <li><a class="shadowbox" href="#" rel="gallery" ><img alt="alt_example" src="{{i}}" /></a></li>
+            <li><a class="shadowbox" href="#"><img alt="alt_example" src="{{i}}" /></a></li>
             % end
           </ul>
         </div>
