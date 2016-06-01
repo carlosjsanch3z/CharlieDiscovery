@@ -326,11 +326,14 @@ def postea():
 	cantidad = request.forms.get("cantidad")
 	tweet = "El jugador #"+invocador+" quiere jugar "+cantidad+"en el modo "+match
 	status = tweepy.API(auth).update_status(status=tweet)
+
+	if status.status_code == 187:
+		return "El mensaje ya fue enviado"
 	return "Mensaje enviado"
 
 @route('/twittear')
 def caminoerroneo():
-	return "Donde vas manolete?"
+	redirect('index.tpl')
 
 
 
