@@ -37,7 +37,7 @@
             <div class="form-row">
                 <label>
                     <span>Soy</span>
-                    <input type="text" name="summoner" placeholder="Tu nombre de invocador">
+                    <input type="text" name="summoner" placeholder="Tu nombre de invocador" required>
                 </label>
             </div>
 
