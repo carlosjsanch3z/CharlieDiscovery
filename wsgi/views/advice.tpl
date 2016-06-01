@@ -53,6 +53,10 @@
                     </select>
                 </label>
             </div>
+
+            <div class="form-row">
+                <p>Recuerda seguir a <span>@CharDiscovery</span> y activar las notificaciones en tu móvil para enterarte cuando juegan tus amigos</p>
+            </div>
 <!--
             <div class="form-row">
                 <label><span>Jugaré</span></label>
