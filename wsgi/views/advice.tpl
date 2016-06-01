@@ -81,8 +81,7 @@
             </div>
 -->
             <div class="form-row">
-                <!--<button type="submit">Avisar</button>-->
-                <input type="submit" />
+                <button type="submit">Avisar</button>
             </div>
 
         </form>
