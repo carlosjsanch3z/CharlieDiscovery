@@ -51,7 +51,7 @@
     <div id="da-slider" class="da-slider">
       <div class="da-slide">
         <h2><a href="/advice" class="da-link">¡ Avisa a tus amigos !</a></h2>
-        <p>Siguenos en <a href="https://twitter.com/CharDiscovery">twitter </a><br />
+        <p>Siguenos en <a class="followme" href="https://twitter.com/CharDiscovery">twitter </a><br />
           Y activa las notificaciones en tu móvil, <br />
           para que todos sepan cuando vas a jugar.</p>
         <div class="da-img"><img alt="alt_example" src="http://lkimg.zamimg.com/images/home/widget/xerath_widget_01.jpg"  /></div>
