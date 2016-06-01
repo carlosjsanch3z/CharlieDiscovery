@@ -329,11 +329,11 @@ def postea():
 	tweet = "El jugador #"+invocador+" quiere jugar una partida "+match+" - "+date
 	status = tweepy.API(auth).update_status(status=tweet)
 
-	return "Mensaje enviado"
+	redirect('/')
 
 @route('/twittear')
 def caminoerroneo():
-	redirect('index.tpl')
+	redirect('/')
 
 
 
