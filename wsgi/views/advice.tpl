@@ -23,8 +23,8 @@
 
     <div class="main-content">
         <!-- You only need this form and the form-basic.css -->
-        % if {{ole}}:
-        <a href="#" class="form-log-in-with-existing">{{ole}}</a>
+        % if msg == "ok":
+        <a href="#" class="form-log-in-with-existing">El mensaje ha sido enviado a todos los seguidores</a>
         <br>
         % end
         <form class="form-basic" action="/twittear" method="post">
