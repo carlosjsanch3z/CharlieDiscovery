@@ -348,6 +348,11 @@ def viaget():
 	ole = ""
 	return template('advice.tpl',msg=ole)
 
+@route('/summoner')
+def fail():
+	redirect('/goodbye')
+
+
 #No se ha encontrado la página
 @error(404)
 def error(error):
