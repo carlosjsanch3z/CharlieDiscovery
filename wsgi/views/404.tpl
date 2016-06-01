@@ -28,7 +28,7 @@
 
 	<div class="mainWrapper">
         <div class="leftHolder">
-        	<img src="images/logotext.png">
+        	<img src="static/404/images/logotext.png">
             <div class="errorNumber">404</div> 
         </div>
         <div class="rightHolder">
