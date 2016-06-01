@@ -356,7 +356,7 @@ def fail():
 #No se ha encontrado la página
 @error(404)
 def error(error):
-    return "Error 404"
+    return template('404.tpl')
 
 
 # Contenido Estatico
