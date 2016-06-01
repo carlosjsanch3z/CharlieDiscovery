@@ -51,7 +51,7 @@
                     </select>
                 </label>
             </div>
-
+<!--
             <div class="form-row">
                 <label><span>Jugaré</span></label>
                 <div class="form-radio-buttons">
@@ -79,7 +79,7 @@
 
                 </div>
             </div>
-
+-->
             <div class="form-row">
                 <!--<button type="submit">Avisar</button>-->
                 <input type="submit" />

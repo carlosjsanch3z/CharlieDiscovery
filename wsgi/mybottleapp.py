@@ -5,6 +5,7 @@ from bottle import route, default_app, get, post, run, template, error, request,
 import json
 import requests
 import tweepy
+import time
 
 
 APIKey = {"api_key":"30ed66a9-fe04-4b57-ad61-871f1995cfb2"}
@@ -323,12 +324,11 @@ def postea():
 	#tweet = request.forms.get("tweet")
 	invocador = request.forms.get("summoner")
 	match = request.forms.get("partida")
-	cantidad = request.forms.get("cantidad")
-	tweet = "El jugador #"+invocador+" quiere jugar "+cantidad+"en el modo "+match
+	#cantidad = request.forms.get("cantidad")
+	date = time.strftime('%l:%M %p %Z on %b %d, %Y')
+	tweet = "El jugador #"+invocador+" quiere jugar una partida "+match+" - "+date
 	status = tweepy.API(auth).update_status(status=tweet)
 
-	if status.status_code == 187:
-		return "El mensaje ya fue enviado"
 	return "Mensaje enviado"
 
 @route('/twittear')
