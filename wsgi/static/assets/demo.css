@@ -19,6 +19,13 @@ body {
     box-sizing: border-box;
 }
 
+p {
+    color: #c7bb00;
+}
+
+p span {
+    color: #4aeec9;
+}
 html{
 	background-color: #efefef;
 }
