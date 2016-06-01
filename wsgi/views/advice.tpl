@@ -86,7 +86,7 @@
                 <button type="submit">Avisar</button>
             </div>
             <div class="form-row">
-                <p>Recuerda seguir a <span><a href="https://twitter.com/CharDiscovery">@CharDiscovery</a></span> y activar las notificaciones en tu móvil para enterarte cuando juegan tus amigos</p>
+                <p>Recuerda seguir a <a href="https://twitter.com/CharDiscovery">@CharDiscovery</a> y activar las notificaciones en tu móvil para enterarte cuando juegan tus amigos.</p>
             </div>
 
         </form>

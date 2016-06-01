@@ -21,9 +21,10 @@ body {
 
 p {
     color: #c7bb00;
+    text-align: center;
 }
 
-p span {
+p a {
     color: #4aeec9;
 }
 html{
