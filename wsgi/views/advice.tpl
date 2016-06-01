@@ -23,17 +23,17 @@
 
     <div class="main-content">
         <!-- You only need this form and the form-basic.css -->
-        % if msg == "ok":
-        <a href="#" class="form-log-in-with-existing">El mensaje ha sido enviado a todos los seguidores</a>
-        <br>
-        % end
+
         <form class="form-basic" action="/twittear" method="post">
 
             <div class="form-title-row">
                 <h1>Avisa a tus amigos</h1>
 
             </div>
-
+        % if msg == "ok":
+        <a href="#" class="form-log-in-with-existing">El mensaje ha sido enviado a todos los seguidores</a>
+        <br>
+        % end
             <div class="form-row">
                 <label>
                     <span>Soy</span>
