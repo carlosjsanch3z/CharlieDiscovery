@@ -348,11 +348,6 @@ def viaget():
 	ole = ""
 	return template('advice.tpl',msg=ole)
 
-@route('/summoner')
-def fail():
-	return "No esta accediendo mediante el metodo POST"
-
-
 #No se ha encontrado la página
 @error(404)
 def error(error):
