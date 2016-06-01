@@ -4,6 +4,7 @@
 from bottle import route, default_app, get, post, run, template, error, request, static_file, response, redirect
 import json
 import requests
+import tweepy
 
 
 APIKey = {"api_key":"30ed66a9-fe04-4b57-ad61-871f1995cfb2"}
@@ -306,14 +307,10 @@ def full(ID=''):
 	return template('s.tpl', iconos=iconos,invocador=name)
 
 #Vamos a tweetear!
-'''
-import tweepy
 
-@get('/escribepost')
-def twittear():
-	return template('tweet.tpl') 
 
-@route('/twittear',method='POST')
+
+@route('/twittear', method='POST')
 def postea():
 	cfg = { 
 		"consumer_key": "cM9oUgu36V8Mh8b3guTqkuIQO",
@@ -324,19 +321,28 @@ def postea():
 	auth = tweepy.OAuthHandler(cfg['consumer_key'], cfg['consumer_secret'])
  	auth.set_access_token(cfg['access_token'], cfg['access_token_secret'])
 	#tweet = request.forms.get("tweet")
-	tweet = "Probando123.."
+	invocador = request.forms.get("summoner")
+	match = request.forms.get("partida")
+	cantidad = request.forms.get("cantidad")
+	tweet = "El jugador #"+invocador+" quiere jugar "+cantidad+"en el modo "+match
 	status = tweepy.API(auth).update_status(status=tweet)
-	return "Tweet enviado"
+	return "Mensaje enviado"
 
-'''
+@route('/twittear')
+def caminoerroneo():
+	return "Donde vas manolete?"
 
 
 
 # FIN TWEET
+@route('/advice', method='POST')
+def viapost():
+	return "NO!"
+
 @route('/advice')
-def twittear():
+def viaget():
 	return template('advice.tpl')
-	
+
 @route('/summoner')
 def fail():
 	return "No esta accediendo mediante el metodo POST"

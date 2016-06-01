@@ -18,14 +18,14 @@
 
 	<header>
 		<h1>Notificador de juego</h1>
-        <a href="#">Inicio</a>
+        <a href="http://charliediscovery-charliejsanchez.rhcloud.com/">Inicio</a>
     </header>
 
     <div class="main-content">
         <!-- <a href="#" class="form-log-in-with-existing">Se ha avisado a los jugadores correctamente →</a> -->
         <!-- You only need this form and the form-basic.css -->
 
-        <form class="form-basic" method="post" action="#">
+        <form class="form-basic" action="/twittear" method="post">
 
             <div class="form-title-row">
                 <h1>Avisa a tus amigos</h1>
@@ -58,21 +58,21 @@
 
                     <div>
                         <label>
-                            <input type="radio" name="radio">
+                            <input type="radio" name="cantidad">
                             <span>1 partida</span>
                         </label>
                     </div>
 
                     <div>
                         <label>
-                            <input type="radio" name="radio">
+                            <input type="radio" name="cantidad">
                             <span>2-3 partidas</span>
                         </label>
                     </div>
 
                     <div>
                         <label>
-                            <input type="radio" name="radio">
+                            <input type="radio" name="cantidad">
                             <span>Hasta el amanecer</span>
                         </label>
                     </div>
@@ -81,7 +81,8 @@
             </div>
 
             <div class="form-row">
-                <button type="submit">Avisar</button>
+                <!--<button type="submit">Avisar</button>-->
+                <input type="submit" />
             </div>
 
         </form>
